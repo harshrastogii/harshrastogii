@@ -18,11 +18,11 @@
 
 I'm a data science postgrad with a prior career in **corporate treasury and financial reconciliation** — two years at WNS Global Services leading a 20-person team across SQL-driven reporting, controls, and compliance.
 
-That background shapes how I build with data now: **accuracy-first, governance-aware, and focused on decisions that have real consequences.** At CDU I sit across three active projects — an ecoacoustic ML thesis, a RAG-based AI assistant for Student Central, and a charity-sector analytics project — while also leading **CDU ITSA** as President and serving as **Northern Territory Lead for GovHack 2025**.
+That background shapes how I build with data now: **accuracy-first, governance-aware, and focused on decisions that have real consequences.** At CDU I work across several projects — a deployed NT crime analytics dashboard, an ecoacoustic ML thesis, a RAG-based AI assistant for Student Central, and a charity-sector analytics project — while also leading **CDU ITSA** as President and serving as **Northern Territory Lead for GovHack 2025**.
 
 ```yaml
 now:         Master of Data Science @ CDU  (grad Nov 2026)
-building:    NT Birds Acoustic Classifier · RAG for Student Central · ACNC Charity Analytics
+building:    NT Crime Dashboard · NT Birds Acoustic Classifier · RAG for Student Central · ACNC Charity Analytics
 prior:       Senior Treasury & Reconciliation Specialist · 18-month top performer
 leading:     CDU ITSA President · GovHack NT Lead · CDU Academic Board sub-committee
 location:    Darwin, Northern Territory 🇦🇺
@@ -31,6 +31,19 @@ location:    Darwin, Northern Territory 🇦🇺
 ---
 
 ## 🚀 Featured Projects
+
+### 🗺️ NT Crime Intelligence Dashboard
+> **Self-directed · deployed · interactive analytics on NT recorded-crime data**
+
+An interactive dashboard analysing Northern Territory recorded-offence data, with cross-filtering across time, region, offence type, and alcohol / domestic-violence flags. Built end-to-end — data cleaning, per-capita normalisation, and an interactive map — and deployed live.
+
+**What makes it interesting:** the per-capita view flips the headline story. In raw counts Darwin dominates, but normalised against population, remote regions like Tennant Creek carry a far higher rate (~7× Darwin's). The build also handles real-world data messiness — a mid-2025 ANZSOC classification change is flagged rather than smoothed over, and the "NT Balance" catch-all is kept off the map to avoid misrepresenting it.
+
+- **Stack:** Python · pandas · Plotly Dash · Carto map tiles · Parquet · Gunicorn · Docker (Hugging Face Spaces)
+- **Status:** Live — deployed and documented
+- **Repo:** [`nt-crime-dashboard`](https://github.com/harshrastogii/nt-crime-dashboard)
+
+---
 
 ### 🐦 Northern Territory Birds — Acoustic Species Classification
 > **Master's research project · AI for biodiversity monitoring in the NT**
@@ -69,7 +82,7 @@ A team analytics project on the **Australian Charities & Not-for-profits Commiss
 
 ## 💼 Professional Experience
 
-**Customer Service Coordinator & Residential Advisor** — *UniLodge Australia · Feb 2025 – Present*
+**Customer Service Coordinator & Residential Advisor** — *UniLodge Australia · Feb – Nov 2025 (previous role)*
 Front-desk operations, lease and payment administration, after-hours emergency response, and residential-life programming. 🏅 **UniLodge "On the Spot Award" (Nov 2025)** for leadership during Severe Tropical Cyclone Fina.
 
 **Freelance Data Analytics Instructor** — *CDU ITSA · May – Jul 2025*
@@ -91,7 +104,7 @@ Reconciliation analysis across multiple client accounts, plus R2R transition sup
 | Role | Organisation | Period |
 |------|--------------|--------|
 | **President** | CDU Information Technology Student Association (ITSA) | Mar 2025 – Present |
-| **Northern Territory Lead** | GovHack | Jul 2025 – Present |
+| **Northern Territory Lead** | GovHack 2025 | Jul 2025 – Present |
 | **Student Representative** | CDU Learning & Teaching Committee *(Academic Board sub-committee)* | Feb 2026 – Present |
 | **Student Representative** | Your Voice Student Network, CDU | Feb 2025 – Present |
 
@@ -113,6 +126,7 @@ Reconciliation analysis across multiple client accounts, plus R2R transition sup
 ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logoColor=white)
 
 **BI & Visualisation**
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat&logo=plotly&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
 ![Power Query](https://img.shields.io/badge/Power%20Query-742774?style=flat&logoColor=white)
 ![PowerApps](https://img.shields.io/badge/PowerApps-742774?style=flat&logo=powerapps&logoColor=white)
@@ -120,7 +134,9 @@ Reconciliation analysis across multiple client accounts, plus R2R transition sup
 
 **Web & Infra**
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![Dash](https://img.shields.io/badge/Dash-008DE4?style=flat&logo=plotly&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6B6B?style=flat&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 
@@ -130,7 +146,7 @@ Reconciliation analysis across multiple client accounts, plus R2R transition sup
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=harshrastogii&show_icons=true&theme=default&hide_border=true" alt="Harsh's GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=harshrastogii&layout=compact&theme=default&hide_border=true" alt="Top languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=harshrastogii&layout=compact&theme=default&hide_border=true&hide=Jupyter%20Notebook&langs_count=8" alt="Top languages" />
 </p>
 
 ---
