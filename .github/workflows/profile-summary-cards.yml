@@ -1,0 +1,23 @@
+name: GitHub Profile Summary Cards
+
+on:
+  schedule:
+    # Runs once a day at 18:00 UTC (~03:30 ACST next morning)
+    - cron: "0 18 * * *"
+  workflow_dispatch:   # lets you run it manually from the Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Generate profile summary cards
+    steps:
+      - uses: actions/checkout@v4
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: harshrastogii
+          EXCLUDE: ""
+          AUTO_PUSH: true
+          # Hide Jupyter Notebook so Python shows as the top language
+          EXCLUDE_LANG: "jupyter notebook"
