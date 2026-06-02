@@ -46,18 +46,6 @@ An interactive dashboard analysing Northern Territory recorded-offence data, wit
 
 ---
 
-### 🐦 Northern Territory Birds — Acoustic Species Classification
-> **Master's research project · AI for biodiversity monitoring in the NT**
-
-Building a deep-learning pipeline that identifies NT bird species from field audio, paired with an interactive dashboard so ecologists and environmental researchers can upload recordings, get automated species detection, and explore biodiversity insights without needing technical knowledge.
-
-**What makes it interesting:** most ecoacoustic models are trained on Northern-Hemisphere species datasets. This project tackles the gap for NT avian fauna, running literature review across 5–10 Q1 / top-conference papers to justify model selection and identify where existing approaches fall short.
-
-- **Stack:** Python · PyTorch / TensorFlow · Librosa · spectrogram feature extraction · Streamlit dashboard
-- **Status:** Active — dashboard prototype built · model architecture in refinement
-
----
-
 ### 🗺️ NT Protected-Area Coverage
 > **Full-stack spatial analysis · deployed · is the NT's reserve network representative?**
 
@@ -67,6 +55,18 @@ A full-stack web app analysing whether the Northern Territory's protected areas 
 
 - **Stack:** React · Leaflet · FastAPI · Python · GeoPandas · Vercel (frontend) · Render (API)
 - **Status:** Live — [nt-protected-areas.vercel.app](https://nt-protected-areas.vercel.app/)
+
+---
+
+### 🐦 Northern Territory Birds — Acoustic Species Classification
+> **Master's research project · AI for biodiversity monitoring in the NT**
+
+Building a deep-learning pipeline that identifies NT bird species from field audio, paired with an interactive dashboard so ecologists and environmental researchers can upload recordings, get automated species detection, and explore biodiversity insights without needing technical knowledge.
+
+**What makes it interesting:** most ecoacoustic models are trained on Northern-Hemisphere species datasets. This project tackles the gap for NT avian fauna, running literature review across 5–10 Q1 / top-conference papers to justify model selection and identify where existing approaches fall short.
+
+- **Stack:** Python · PyTorch / TensorFlow · Librosa · spectrogram feature extraction · Streamlit dashboard
+- **Status:** Active — dashboard prototype built · model architecture in refinement
 
 ---
 
