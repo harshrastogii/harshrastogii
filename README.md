@@ -6,6 +6,7 @@
 </p>
 
 <p align="center">
+  <a href="https://harshrastogii.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-0a0a0a?style=flat&logo=vercel&logoColor=white" alt="Portfolio"/></a>
   <a href="mailto:harshrastogi636@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" alt="Email"/></a>
   <a href="https://www.linkedin.com/in/harshrastogii/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
   <img src="https://img.shields.io/badge/Location-Darwin%2C%20NT-informational?style=flat" alt="Location"/>
@@ -154,6 +155,6 @@ Reconciliation analysis across multiple client accounts, plus R2R transition sup
 
 Always up for a conversation about **applied data science**, **RAG systems**, **civic tech and open government data**, **ecoacoustics**, or **breaking into the Australian data sector**.
 
-📧 **harshrastogi636@gmail.com** · 📍 Darwin, NT · 🔗 [LinkedIn](https://www.linkedin.com/in/harshrastogii/)
+🌐 **[harshrastogii.vercel.app](https://harshrastogii.vercel.app/)** · 📧 **harshrastogi636@gmail.com** · 📍 Darwin, NT · 🔗 [LinkedIn](https://www.linkedin.com/in/harshrastogii/)
 
 <sub>⚡ "Data is most useful when it's made usable for the people it's meant to serve."</sub>
