@@ -116,9 +116,9 @@ Reconciliation analysis across multiple client accounts, plus R2R transition sup
 
 | Role | Organisation | Period |
 |------|--------------|--------|
-| **President** | CDU Information Technology Student Association (ITSA) | Mar 2025 – Present |
+| **President** | CDU Information Technology Student Association (ITSA) | Mar 2025 – June 2026 |
 | **Northern Territory Lead** | GovHack 2025 | Jul 2025 – Present |
-| **Student Representative** | CDU Learning & Teaching Committee *(Academic Board sub-committee)* | Feb 2026 – Present |
+| **Student Representative** | CDU Learning & Teaching Committee *(Academic Board sub-committee)* | Feb 2026 – June 2026 |
 | **Student Representative** | Your Voice Student Network, CDU | Feb 2025 – Present |
 
 ---
