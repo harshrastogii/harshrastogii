@@ -58,6 +58,18 @@ Building a deep-learning pipeline that identifies NT bird species from field aud
 
 ---
 
+### 🗺️ NT Protected-Area Coverage
+> **Full-stack spatial analysis · deployed · is the NT's reserve network representative?**
+
+A full-stack web app analysing whether the Northern Territory's protected areas safeguard a representative cross-section of its land. A React + Leaflet frontend talks to a FastAPI backend that runs the spatial analysis on demand, returning per-bioregion coverage and gap statistics to an interactive map.
+
+**What makes it interesting:** the reserve network over-represents rugged northern country and under-protects the arid interior. The Tanami — the Territory's largest bioregion at ~538,000 km² — is a statistically significant cold spot at just 0.6% protection, a gap that raw area totals completely hide.
+
+- **Stack:** React · Leaflet · FastAPI · Python · GeoPandas · Vercel (frontend) · Render (API)
+- **Status:** Live — [nt-protected-areas.vercel.app](https://nt-protected-areas.vercel.app/)
+
+---
+
 ### 🤖 CDU Student Central — RAG-Based AI Assistant
 > **Early-stage build · replacing front-desk queries with a source-cited AI chatbot**
 
