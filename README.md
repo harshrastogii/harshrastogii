@@ -23,7 +23,7 @@ That background shapes how I build with data now: **accuracy-first, governance-a
 
 ```yaml
 now:         Master of Data Science @ CDU  (grad Nov 2026)
-building:    NT Crime Dashboard · NT Birds Acoustic Classifier · RAG for Student Central · ACNC Charity Analytics
+building:    NT Crime Dashboard · NT Roads Insights · NT Protected Areas · WhereGradsGo · NT Birds Classifier · RAG for Student Central · ACNC Charity Analytics
 prior:       Senior Treasury & Reconciliation Specialist · 18-month top performer
 leading:     CDU ITSA President · GovHack NT Lead · CDU Academic Board sub-committee
 location:    Darwin, Northern Territory 🇦🇺
@@ -43,6 +43,42 @@ An interactive dashboard analysing Northern Territory recorded-offence data, wit
 - **Stack:** Python · pandas · Plotly Dash · Carto map tiles · Parquet · Gunicorn · Docker (Hugging Face Spaces)
 - **Status:** Live — deployed and documented
 - **Repo:** [`nt-crime-dashboard`](https://github.com/harshrastogii/nt-crime-dashboard)
+
+---
+
+### 🚦 NT Roads Insights
+> **Deployed · multi-tab road safety & traffic dashboard from NT open data**
+
+A Streamlit dashboard bringing Northern Territory road data into one interactive view — traffic volumes and commute corridors, road-safety trends over time, and wet-season closures. Built from NT Government open datasets to be genuinely useful to two audiences at once: daily commuters planning routes, and local authorities deciding where to invest.
+
+**What makes it interesting:** it stitches together several separate NT open datasets (annual traffic reports, bike counters, road-closure tables, Towards Zero safety stats) that normally live in scattered PDFs and spreadsheets, into a single tabbed product with maps, seasonality, and multi-year trends.
+
+- **Stack:** Python · Streamlit · pandas · Plotly
+- **Status:** Live — [nt-roads-insights.streamlit.app](https://nt-roads-insights.streamlit.app/)
+
+---
+
+### 🗺️ NT Protected-Area Coverage
+> **Full-stack spatial analysis · deployed · is the NT's reserve network representative?**
+
+A full-stack web app analysing whether the Northern Territory's protected areas safeguard a representative cross-section of its land. A React + Leaflet frontend talks to a FastAPI backend that runs the spatial analysis on demand, returning per-bioregion coverage and gap statistics to an interactive map.
+
+**What makes it interesting:** the reserve network over-represents rugged northern country and under-protects the arid interior. The Tanami — the Territory's largest bioregion at ~538,000 km² — is a statistically significant cold spot at just 0.6% protection, a gap that raw area totals completely hide.
+
+- **Stack:** React · Leaflet · FastAPI · Python · GeoPandas · Vercel (frontend) · Render (API)
+- **Status:** Live — [nt-protected-areas.vercel.app](https://nt-protected-areas.vercel.app/)
+
+---
+
+### 🎓 WhereGradsGo — AI Graduate Job Finder
+> **Deployed · helping students start their job search from the right employers**
+
+An AI-assisted job-search app for Australian graduates. Pick from 40 universities (ranked by QS), see the key graduate employers for that institution, and browse live openings pulled from the Adzuna job API. Upload a resume and Gemini matches roles to your actual skills; one click takes you to the original posting.
+
+**What makes it interesting:** data honesty is a first-class design principle. Curated, regionally-sourced employer lists are clearly distinguished from state-level approximations, nothing is scraped, and resume-privacy is spelled out up front — the app never pretends its data is something it isn't.
+
+- **Stack:** Python · Streamlit · Adzuna API · Google Gemini · pypdf
+- **Status:** Live — [wheregradsgo.streamlit.app](https://wheregradsgo.streamlit.app/)
 
 ---
 
