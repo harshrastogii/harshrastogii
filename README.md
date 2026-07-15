@@ -1,54 +1,110 @@
-<h1 align="center">Hi, I'm Harsh Rastogi 👋</h1>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:155e75,100:14b8a6&height=190&section=header&text=Harsh%20Rastogi&fontSize=48&fontColor=f8fafc&fontAlignY=38&desc=Data%20Science%20%E2%80%A2%20Spatial%20Analytics%20%E2%80%A2%20AI%20for%20Public%20Good&descAlignY=60&descSize=18&animation=fadeIn" alt="Harsh Rastogi — Data Science, Spatial Analytics and AI for Public Good" />
 
 <p align="center">
-  <strong>Data scientist building practical tools for biodiversity, civic data, and public-interest technology.</strong><br />
-  Master of Data Science, Charles Darwin University · Darwin, Northern Territory, Australia
+  <strong>Master of Data Science student at Charles Darwin University</strong><br />
+  Building practical, transparent data products for biodiversity, civic technology, and public decision-making in the Northern Territory.
 </p>
 
 <p align="center">
-  <a href="https://harshrastogii.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-111111?style=flat&logo=vercel&logoColor=white" alt="Portfolio" /></a>
-  <a href="https://www.linkedin.com/in/harshrastogii/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:harshrastogi636@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://harshrastogii.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-0f172a?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/harshrastogii/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:harshrastogi636@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <img src="https://komarev.com/ghpvc/?username=harshrastogii&style=for-the-badge&color=0f766e&label=PROFILE+VIEWS" alt="Profile views" />
 </p>
 
-## About
+## About me
 
-I turn complex data into transparent, useful products. My work combines spatial analysis, machine learning, interactive dashboards, and careful data governance—especially for Northern Territory environmental and civic-data questions.
-
-Previously, I worked in corporate treasury and reconciliation, leading a 20-person team and building SQL-driven reporting and controls. I now bring that same accuracy-first mindset to applied data science.
+I turn complex data into clear, useful tools. Across my projects, I combine **spatial analytics, machine learning, data visualisation, civic technology, AI, and biodiversity science**—with an emphasis on reproducibility, transparency, and decisions that matter in the real world.
 
 ```text
-Now        Master's research in biodiversity data science and AI
-Focus      Spatial analytics · ML · data visualisation · civic technology
-Community  President, CDU ITSA · Northern Territory Lead, GovHack 2025
+Degree       Master of Data Science · Charles Darwin University
+Based in     Darwin, Northern Territory, Australia
+Community    Northern Territory Lead · GovHack
+Building     Data products that make public and environmental data easier to use
 ```
 
-## Selected projects
+## Featured work
 
-| Project | What it does | Built with |
-|---|---|---|
-| [Biodiversity surrogate validation](https://github.com/harshrastogii/biodiversity-surrogate-validation) | Pre-registered research testing how well open spatial data can reproduce independent expert biodiversity assessments in the NT. | Python · GeoPandas · spatial statistics |
-| [NT Conservation Exposure](https://github.com/harshrastogii/nt-conservation-exposure) | A transparent Territory-wide conservation exposure index, independently validated against expert biodiversity assessment. | Python · geospatial analysis · reproducible research |
-| [BushMetrics](https://github.com/harshrastogii/bushmetrics) · [Live app](https://bushmetrics.vercel.app/) | Interactive analysis of how representatively NT protected areas cover different landscapes and bioregions. | React · Leaflet · FastAPI · GeoPandas |
-| [NT Bird Acoustic Monitor](https://github.com/harshrastogii/BirdDashboard) | AI-powered NT bird identification and acoustic-monitoring dashboard for field ecology. | Python · TensorFlow · BirdNET · Streamlit |
-| [RoadState](https://github.com/harshrastogii/RoadState) · [Live app](https://roadstate.harshrastogii.com) | Interactive report on NT traffic, commuting, and wet-season road access using government open data. | Next.js · TypeScript · Visx |
-| [NT Crime Dashboard](https://github.com/harshrastogii/nt-crime-dashboard) | Interactive recorded-crime analytics, including regional and per-capita views. | Python · Plotly Dash · pandas |
-| [Gradaroo](https://github.com/harshrastogii/Gradaroo) · [Live app](https://gradaroo.com) | Graduate-job discovery platform that begins with employers known to hire a university's graduates. | Python · Streamlit · Adzuna API · Gemini |
-| [ArmaWatch](https://github.com/harshrastogii/ArmaWatch) | Modern, accessible map of Australian weapons-industry facilities, prepared for Wage Peace. | React · TypeScript · MapLibre |
-| [Australian Charities Analytics](https://github.com/harshrastogii/PRT564-Group2-CharityAnalysis) | Group analysis of the ACNC Charity Register for public-sector and philanthropic decision-making. | Python · SQL · Power BI · scikit-learn |
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🌿 <a href="https://github.com/harshrastogii/biodiversity-surrogate-validation">Biodiversity Surrogate Validation</a></h3>
+      <p>Pre-registered research testing whether open spatial data can reliably reproduce independent expert biodiversity assessments in the Northern Territory.</p>
+      <sub>Python · GeoPandas · spatial statistics · reproducible research</sub>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🗺️ <a href="https://github.com/harshrastogii/bushmetrics">BushMetrics</a></h3>
+      <p>Interactive analysis of whether NT protected areas represent its land and bioregions fairly.</p>
+      <sub>React · Leaflet · FastAPI · GeoPandas · <a href="https://bushmetrics.vercel.app/">live app</a></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🐦 <a href="https://github.com/harshrastogii/BirdDashboard">NT Bird Acoustic Monitor</a></h3>
+      <p>AI-powered acoustic monitoring for Northern Territory bird species, designed for field ecology and biodiversity management.</p>
+      <sub>Python · TensorFlow · BirdNET · Streamlit</sub>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🚦 <a href="https://github.com/harshrastogii/RoadState">RoadState</a></h3>
+      <p>An interactive NT report on traffic, commuting, and wet-season road access using open government data.</p>
+      <sub>Next.js · TypeScript · Visx · <a href="https://roadstate.harshrastogii.com">live app</a></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🎓 <a href="https://github.com/harshrastogii/Gradaroo">Gradaroo</a></h3>
+      <p>A graduate-job discovery platform that starts from the employers known to hire a university's graduates.</p>
+      <sub>Python · Streamlit · Adzuna API · Gemini · <a href="https://gradaroo.com">live app</a></sub>
+    </td>
+    <td width="50%" valign="top">
+      <h3>📊 <a href="https://github.com/harshrastogii/nt-crime-dashboard">NT Crime Dashboard</a></h3>
+      <p>Interactive recorded-crime analysis with regional and per-capita views that reveal patterns raw counts can hide.</p>
+      <sub>Python · Plotly Dash · pandas</sub>
+    </td>
+  </tr>
+</table>
+
+<details>
+  <summary><strong>Explore more projects</strong></summary>
+  <br />
+
+  | Project | Focus |
+  |---|---|
+  | [NT Conservation Exposure](https://github.com/harshrastogii/nt-conservation-exposure) | A transparent conservation-exposure index, independently validated against expert biodiversity assessment. |
+  | [ArmaWatch](https://github.com/harshrastogii/ArmaWatch) | An accessible modern map of Australian weapons-industry facilities, prepared for Wage Peace. |
+  | [Australian Charities Analytics](https://github.com/harshrastogii/PRT564-Group2-CharityAnalysis) | ACNC Charity Register analysis for public-sector and philanthropic decision-making. |
+</details>
+
+## Experience in analytics
+
+| Role | Analytics focus |
+|---|---|
+| **Senior Treasury & Reconciliation Specialist** | Process improvement and analytics—using data to strengthen workflows, controls, and operational decisions. |
+| **Treasury Analyst** | Treasury analytics and reporting, including SQL-driven reporting for stakeholder decision-making. |
+| **Reconciliation Analyst** | Data quality and analytics across reconciliation processes, supporting accurate, controlled financial operations. |
 
 ## Toolkit
 
-`Python` · `SQL` · `R` · `pandas` · `scikit-learn` · `TensorFlow` · `GeoPandas` · `Plotly` · `Power BI` · `React` · `Next.js` · `FastAPI` · `Streamlit` · `Docker`
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" alt="SQL" />
+  <img src="https://img.shields.io/badge/GeoPandas-139C5A?style=flat-square&logo=python&logoColor=white" alt="GeoPandas" />
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow" />
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
+  <img src="https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white" alt="Plotly" />
+  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" alt="Power BI" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit" />
+</p>
 
 ## GitHub activity
 
 <p align="center">
-  <img src="./profile-summary-card-output/github_dark/0-profile-details.svg" alt="Harsh's GitHub profile summary" />
+  <img width="96%" src="./profile-summary-card-output/github_dark/0-profile-details.svg" alt="Harsh's GitHub profile summary" />
 </p>
 
-## Let's connect
-
-I'm always interested in applied data science, biodiversity monitoring, responsible AI, and civic technology.
-
-[Portfolio](https://harshrastogii.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/harshrastogii/) · [Email](mailto:harshrastogi636@gmail.com)
+<p align="center">
+  <i>Interested in applied data science, biodiversity monitoring, responsible AI, and civic technology?</i><br />
+  <a href="https://harshrastogii.vercel.app/">Portfolio</a> · <a href="https://www.linkedin.com/in/harshrastogii/">LinkedIn</a> · <a href="mailto:harshrastogi636@gmail.com">Email</a>
+</p>
