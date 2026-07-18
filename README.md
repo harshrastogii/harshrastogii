@@ -40,9 +40,9 @@ Building     Data products that make public and environmental data easier to use
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>🐦 <a href="https://github.com/harshrastogii/BirdDashboard">NT Bird Acoustic Monitor</a></h3>
-      <p>AI-powered acoustic monitoring for Northern Territory bird species, designed for field ecology and biodiversity management.</p>
-      <sub>Python · TensorFlow · BirdNET · Streamlit</sub>
+      <h3>🐦 <a href="https://github.com/harshrastogii/AvianObservatory">Avian Observatory</a></h3>
+      <p>An environmental-intelligence platform that identifies NT birds from audio, then connects detections with spatial and biodiversity context for conservation decisions.</p>
+      <sub>Python · FastAPI · Next.js · PostgreSQL · TensorFlow · BirdNET</sub>
     </td>
     <td width="50%" valign="top">
       <h3>🚦 <a href="https://github.com/harshrastogii/RoadState">RoadState</a></h3>
