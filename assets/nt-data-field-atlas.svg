@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Northern Territory Data Field Atlas</title>
+  <desc id="desc">A visual summary of Harsh Rastogi's work across biodiversity, civic intelligence, and responsible AI.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071b2a"/>
+      <stop offset="0.55" stop-color="#0b3c49"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5eead4" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#99f6e4" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#5eead4" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-30%" width="140%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" rx="24" fill="url(#bg)"/>
+  <g fill="none" stroke="#8be5d8" stroke-opacity="0.13" stroke-width="1.2">
+    <path d="M-30 80 C110 25 190 145 340 88 S585 38 690 108 920 164 1230 48"/>
+    <path d="M-40 118 C105 62 210 190 356 123 S596 73 710 143 930 207 1240 88"/>
+    <path d="M-20 290 C120 215 236 333 382 268 S610 217 732 292 980 346 1220 242"/>
+    <path d="M-25 332 C112 258 240 377 396 313 S628 259 748 338 975 387 1230 280"/>
+    <circle cx="1065" cy="108" r="82"/>
+    <circle cx="1065" cy="108" r="110"/>
+  </g>
+  <g fill="#ccfbf1" fill-opacity="0.42">
+    <circle cx="103" cy="77" r="2"/><circle cx="153" cy="104" r="1.5"/><circle cx="218" cy="64" r="2"/>
+    <circle cx="907" cy="302" r="2"/><circle cx="960" cy="347" r="1.5"/><circle cx="1098" cy="286" r="2"/>
+  </g>
+
+  <text x="70" y="75" fill="#99f6e4" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" letter-spacing="3">NORTHERN TERRITORY · AUSTRALIA</text>
+  <text x="70" y="130" fill="#f8fafc" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="750">DATA FIELD ATLAS</text>
+  <text x="70" y="160" fill="#cbd5e1" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="18">Mapping evidence, building tools, and making complex systems usable.</text>
+  <rect x="70" y="188" width="490" height="2" fill="url(#line)"/>
+
+  <g transform="translate(70 235)">
+    <rect width="310" height="110" rx="16" fill="#062c35" fill-opacity="0.75" stroke="#5eead4" stroke-opacity="0.28"/>
+    <circle cx="36" cy="35" r="13" fill="#14b8a6" filter="url(#glow)"/>
+    <path d="M30 42c4-16 15-20 23-25-4 10-5 20-15 26-3 2-6 1-8-1Z" fill="#ecfdf5"/>
+    <text x="63" y="39" fill="#f0fdfa" font-family="system-ui, sans-serif" font-size="18" font-weight="700">BIODIVERSITY</text>
+    <text x="24" y="73" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="14">Acoustics · Conservation · Spatial ecology</text>
+    <text x="24" y="94" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="12">AVIAN OBSERVATORY · BUSHMETRICS</text>
+  </g>
+
+  <g transform="translate(405 235)">
+    <rect width="310" height="110" rx="16" fill="#062c35" fill-opacity="0.75" stroke="#5eead4" stroke-opacity="0.28"/>
+    <circle cx="36" cy="35" r="13" fill="#38bdf8" filter="url(#glow)"/>
+    <path d="M27 41h18M30 35h12M33 29h6M34 41v7M42 41v7" stroke="#f0f9ff" stroke-width="2.2" stroke-linecap="round"/>
+    <text x="63" y="39" fill="#f0fdfa" font-family="system-ui, sans-serif" font-size="18" font-weight="700">CIVIC INTELLIGENCE</text>
+    <text x="24" y="73" fill="#bae6fd" font-family="system-ui, sans-serif" font-size="14">Open data · Public decisions · Dashboards</text>
+    <text x="24" y="94" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="12">ROADSTATE · NT CRIME DASHBOARD</text>
+  </g>
+
+  <g transform="translate(740 235)">
+    <rect width="310" height="110" rx="16" fill="#062c35" fill-opacity="0.75" stroke="#5eead4" stroke-opacity="0.28"/>
+    <circle cx="36" cy="35" r="13" fill="#a78bfa" filter="url(#glow)"/>
+    <path d="M28 42c6-14 16-14 20 0M29 34c5 5 14 5 19 0M33 46v4m10-4v4" fill="none" stroke="#f5f3ff" stroke-width="2" stroke-linecap="round"/>
+    <text x="63" y="39" fill="#f0fdfa" font-family="system-ui, sans-serif" font-size="18" font-weight="700">RESPONSIBLE AI</text>
+    <text x="24" y="73" fill="#ddd6fe" font-family="system-ui, sans-serif" font-size="14">Transparent models · Reproducible evidence</text>
+    <text x="24" y="94" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="12">GRADAROO · APPLIED ML RESEARCH</text>
+  </g>
+
+  <g transform="translate(1090 75)" fill="#d1fae5">
+    <path d="M18 8c11 0 19 9 19 20 0 14-11 25-25 25-11 0-20-8-20-19 0-14 11-26 26-26Zm-12 26c6-3 12-5 19-5-2-7-7-12-14-14-4 5-6 11-5 19Zm2 6c2 4 6 7 12 7 7 0 13-5 15-12-9 0-18 2-27 5Z"/>
+    <text x="15" y="78" font-family="ui-monospace, monospace" font-size="11" letter-spacing="1.5">FIELD NOTES</text>
+  </g>
+</svg>

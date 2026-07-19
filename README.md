@@ -23,6 +23,10 @@ Community    Northern Territory Lead · GovHack
 Building     Data products that make public and environmental data easier to use
 ```
 
+<p align="center">
+  <img width="100%" src="./assets/nt-data-field-atlas.svg" alt="Northern Territory Data Field Atlas: biodiversity, civic intelligence, and responsible AI" />
+</p>
+
 ## Featured work
 
 <table>
@@ -101,7 +105,11 @@ Building     Data products that make public and environmental data easier to use
 ## GitHub activity
 
 <p align="center">
-  <img width="96%" src="./profile-summary-card-output/github_dark/0-profile-details.svg" alt="Harsh's GitHub profile summary" />
+  <img width="96%" src="./assets/github-metrics.svg" alt="Automatically refreshed GitHub activity, languages, repositories, and contribution calendar" />
+</p>
+
+<p align="center">
+  <sub>Metrics are refreshed weekly by GitHub Actions.</sub>
 </p>
 
 <p align="center">
