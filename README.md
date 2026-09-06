@@ -20,7 +20,7 @@ I turn complex data into clear, useful tools. Across my projects, I combine **sp
 Degree       Master of Data Science · Charles Darwin University
 Based in     Darwin, Northern Territory, Australia
 Community    Northern Territory Lead · GovHack
-Building     Data products that make public and environmental data easier to use
+Building     Data products that make public, environmental, and community data easier to use
 ```
 
 <p align="center">
@@ -32,14 +32,14 @@ Building     Data products that make public and environmental data easier to use
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>🌿 <a href="https://github.com/harshrastogii/biodiversity-surrogate-validation">Biodiversity Surrogate Validation</a></h3>
-      <p>Pre-registered research testing whether open spatial data can reliably reproduce independent expert biodiversity assessments in the Northern Territory.</p>
-      <sub>Python · GeoPandas · spatial statistics · reproducible research</sub>
+      <h3>🌧️ <a href="https://github.com/harshrastogii/rainsignal-au">RainSignal AU</a></h3>
+      <p>A transparent rainfall-intelligence project connecting live Bureau of Meteorology observations with frozen, evaluated machine-learning models for 49 Australian towns.</p>
+      <sub>Python · machine learning · BoM data · data validation</sub>
     </td>
     <td width="50%" valign="top">
-      <h3>🗺️ <a href="https://github.com/harshrastogii/bushmetrics">BushMetrics</a></h3>
-      <p>Interactive analysis of whether NT protected areas represent its land and bioregions fairly.</p>
-      <sub>React · Leaflet · FastAPI · GeoPandas · <a href="https://bushmetrics.vercel.app/">live app</a></sub>
+      <h3>⚖️ <a href="https://github.com/harshrastogii/FairFix">FairFix NT</a></h3>
+      <p>Explainable, human-in-the-loop triage for remote housing repairs—separating tenant need from cost-to-serve so logistics cannot quietly deprioritise remote communities.</p>
+      <sub>Python · Streamlit · fairness testing · explainable AI</sub>
     </td>
   </tr>
   <tr>
@@ -49,21 +49,21 @@ Building     Data products that make public and environmental data easier to use
       <sub>Python · FastAPI · Next.js · PostgreSQL · TensorFlow · BirdNET</sub>
     </td>
     <td width="50%" valign="top">
-      <h3>🚦 <a href="https://github.com/harshrastogii/RoadState">RoadState</a></h3>
-      <p>An interactive NT report on traffic, commuting, and wet-season road access using open government data.</p>
-      <sub>Next.js · TypeScript · Visx · <a href="https://roadstate.harshrastogii.com">live app</a></sub>
+      <h3>🌿 <a href="https://github.com/harshrastogii/biodiversity-surrogate-validation">Biodiversity Surrogate Validation</a></h3>
+      <p>Pre-registered research testing whether open spatial data can reliably reproduce independent expert biodiversity assessments in the Northern Territory.</p>
+      <sub>Python · GeoPandas · spatial statistics · reproducible research</sub>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>🎓 <a href="https://github.com/harshrastogii/Gradaroo">Gradaroo</a></h3>
-      <p>A graduate-job discovery platform that starts from the employers known to hire a university's graduates.</p>
-      <sub>Python · Streamlit · Adzuna API · Gemini · <a href="https://gradaroo.com">live app</a></sub>
+      <h3>🗺️ <a href="https://github.com/harshrastogii/bushmetrics">BushMetrics</a></h3>
+      <p>Interactive analysis of whether NT protected areas represent its land and bioregions fairly.</p>
+      <sub>React · Leaflet · FastAPI · GeoPandas · <a href="https://bushmetrics.vercel.app/">live app</a></sub>
     </td>
     <td width="50%" valign="top">
-      <h3>📊 <a href="https://github.com/harshrastogii/nt-crime-dashboard">NT Crime Dashboard</a></h3>
-      <p>Interactive recorded-crime analysis with regional and per-capita views that reveal patterns raw counts can hide.</p>
-      <sub>Python · Plotly Dash · pandas</sub>
+      <h3>🚦 <a href="https://github.com/harshrastogii/RoadState">RoadState</a></h3>
+      <p>An interactive NT report on traffic, commuting, and wet-season road access using open government data.</p>
+      <sub>Next.js · TypeScript · Visx</sub>
     </td>
   </tr>
 </table>
@@ -76,6 +76,7 @@ Building     Data products that make public and environmental data easier to use
   |---|---|
   | [NT Conservation Exposure](https://github.com/harshrastogii/nt-conservation-exposure) | A transparent conservation-exposure index, independently validated against expert biodiversity assessment. |
   | [ArmaWatch](https://github.com/harshrastogii/ArmaWatch) | An accessible modern map of Australian weapons-industry facilities, prepared for Wage Peace. |
+  | [Territory Crime Atlas](https://github.com/harshrastogii/nt-crime-dashboard) | Reproducible NT recorded-crime analysis and an automatically maintained public dataset. |
   | [Australian Charities Analytics](https://github.com/harshrastogii/PRT564-Group2-CharityAnalysis) | ACNC Charity Register analysis for public-sector and philanthropic decision-making. |
 </details>
 

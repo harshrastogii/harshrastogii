@@ -52,7 +52,7 @@
     <path d="M27 41h18M30 35h12M33 29h6M34 41v7M42 41v7" stroke="#f0f9ff" stroke-width="2.2" stroke-linecap="round"/>
     <text x="63" y="39" fill="#f0fdfa" font-family="system-ui, sans-serif" font-size="18" font-weight="700">CIVIC INTELLIGENCE</text>
     <text x="24" y="73" fill="#bae6fd" font-family="system-ui, sans-serif" font-size="14">Open data · Public decisions · Dashboards</text>
-    <text x="24" y="94" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="12">ROADSTATE · NT CRIME DASHBOARD</text>
+    <text x="24" y="94" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="12">FAIRFIX NT · TERRITORY CRIME ATLAS</text>
   </g>
 
   <g transform="translate(740 235)">
@@ -61,7 +61,7 @@
     <path d="M28 42c6-14 16-14 20 0M29 34c5 5 14 5 19 0M33 46v4m10-4v4" fill="none" stroke="#f5f3ff" stroke-width="2" stroke-linecap="round"/>
     <text x="63" y="39" fill="#f0fdfa" font-family="system-ui, sans-serif" font-size="18" font-weight="700">RESPONSIBLE AI</text>
     <text x="24" y="73" fill="#ddd6fe" font-family="system-ui, sans-serif" font-size="14">Transparent models · Reproducible evidence</text>
-    <text x="24" y="94" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="12">GRADAROO · APPLIED ML RESEARCH</text>
+    <text x="24" y="94" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="12">RAINSIGNAL AU · APPLIED ML RESEARCH</text>
   </g>
 
   <g transform="translate(1090 75)" fill="#d1fae5">
