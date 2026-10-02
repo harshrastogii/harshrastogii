@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="330" viewBox="0 0 560 330" role="img" aria-labelledby="t d">
+<title id="t">FairFix NT</title>
+<desc id="d">FairFix NT: repair jobs shuffle within urgent, high and routine need bands; a job that tries to cross a band is blocked.</desc>
+<style>
+.code{font:500 11.5px 'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;fill:#35d3ee;letter-spacing:.16em}
+.ttl{font:700 27px 'Plus Jakarta Sans','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;fill:#e6e8ec;letter-spacing:-.01em}
+.txt{font:400 15.5px 'Plus Jakarta Sans','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;fill:#9ca0a8}
+.stk{font:400 11.5px 'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;fill:#7d8189}
+.big{font:700 30px 'Plus Jakarta Sans','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;fill:#e6e8ec;letter-spacing:-.02em}
+.cap{font:500 10.5px 'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;fill:#9ca0a8;letter-spacing:.06em}
+.mini{font:500 9.5px 'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;fill:#7d8189;letter-spacing:.08em}
+.pill{font:600 10px 'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;letter-spacing:.12em}
+.blink{animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+
+.sh{animation:sh 9s cubic-bezier(.6,0,.3,1) infinite}
+.try{animation:try 9s cubic-bezier(.5,0,.3,1) infinite}
+@keyframes try{0%,58%,82%,100%{transform:translateY(0)}66%{transform:translateY(-13px)}70%{transform:translateY(-9px)}74%{transform:translateY(0)}}
+.bar{animation:bar 9s ease infinite}
+@keyframes bar{0%,62%,80%,100%{stroke-opacity:.35}66%,72%{stroke-opacity:1;stroke:#ef4444}}
+.lock{animation:lock 9s ease infinite;opacity:0}
+@keyframes lock{0%,62%,82%,100%{opacity:0}66%,78%{opacity:1}}
+@keyframes m00{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(216px)}55%,93%{transform:translateX(216px)}}@keyframes m01{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(288px)}55%,93%{transform:translateX(216px)}}@keyframes m02{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(144px)}55%,93%{transform:translateX(-72px)}}@keyframes m03{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(-216px)}55%,93%{transform:translateX(144px)}}@keyframes m04{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(-144px)}55%,93%{transform:translateX(-288px)}}@keyframes m10{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(360px)}55%,93%{transform:translateX(0px)}}@keyframes m11{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(144px)}55%,93%{transform:translateX(216px)}}@keyframes m12{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(144px)}55%,93%{transform:translateX(216px)}}@keyframes m13{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(-144px)}55%,93%{transform:translateX(-72px)}}@keyframes m14{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(-288px)}55%,93%{transform:translateX(-72px)}}@keyframes m20{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(72px)}55%,93%{transform:translateX(216px)}}@keyframes m21{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(288px)}55%,93%{transform:translateX(72px)}}@keyframes m22{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(-144px)}55%,93%{transform:translateX(144px)}}@keyframes m23{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(0px)}55%,93%{transform:translateX(-216px)}}@keyframes m24{0%,20%,100%{transform:translateX(0)}25%,50%{transform:translateX(-144px)}55%,93%{transform:translateX(72px)}}@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+<defs>
+<clipPath id="band"><path d="M1,172 V14 a13,13 0 0 1 13,-13 H546 a13,13 0 0 1 13,13 V172 Z"/></clipPath>
+<pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20,0 H0 V20" fill="none" stroke="#1f2023" stroke-width="1"/></pattern>
+<linearGradient id="cardg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17181a"/><stop offset="1" stop-color="#141517"/></linearGradient>
+</defs>
+<rect x=".5" y=".5" width="559" height="329" rx="14" fill="url(#cardg)" stroke="#26282c"/>
+<g clip-path="url(#band)"><rect width="560" height="172" fill="#0c0d0e"/><rect width="560" height="172" fill="url(#grid)" opacity=".7"/>
+<text x="22" y="96" class="mini" style="fill:#ef4444">URGENT</text>
+<g style="animation:m00 9s cubic-bezier(.6,0,.3,1) infinite"><rect x="100" y="83" width="68" height="18" rx="9" fill="#101112" stroke="#ef4444" stroke-opacity=".8"/><text x="109" y="95.5" class="mini" style="fill:#c0c3c9">J-61</text><text x="160" y="95.5" text-anchor="end" class="mini" style="fill:#63666e">$$$</text></g>
+<g style="animation:m01 9s cubic-bezier(.6,0,.3,1) infinite"><rect x="172" y="83" width="68" height="18" rx="9" fill="#101112" stroke="#ef4444" stroke-opacity=".8"/><text x="181" y="95.5" class="mini" style="fill:#c0c3c9">J-47</text><text x="232" y="95.5" text-anchor="end" class="mini" style="fill:#63666e">$</text></g>
+<g style="animation:m02 9s cubic-bezier(.6,0,.3,1) infinite"><rect x="244" y="83" width="68" height="18" rx="9" fill="#101112" stroke="#ef4444" stroke-opacity=".8"/><text x="253" y="95.5" class="mini" style="fill:#c0c3c9">J-38</text><text x="304" y="95.5" text-anchor="end" class="mini" style="fill:#63666e">$$$</text></g>
+<g style="animation:m03 9s cubic-bezier(.6,0,.3,1) infinite"><rect x="316" y="83" width="68" height="18" rx="9" fill="#101112" stroke="#ef4444" stroke-opacity=".8"/><text x="325" y="95.5" class="mini" style="fill:#c0c3c9">J-78</text><text x="376" y="95.5" text-anchor="end" class="mini" style="fill:#63666e">$$</text></g>
+<g style="animation:m04 9s cubic-bezier(.6,0,.3,1) infinite"><rect x="388" y="83" width="68" height="18" rx="9" fill="#101112" stroke="#ef4444" stroke-opacity=".8"/><text x="397" y="95.5" class="mini" style="fill:#c0c3c9">J-45</text><text x="448" y="95.5" text-anchor="end" class="mini" style="fill:#63666e">$</text></g>
+<text x="22" y="126" class="mini" style="fill:#fbbf24">HIGH</text>
+<line class="bar" x1="100" y1="107" x2="546" y2="107" stroke="#7d8189" stroke-dasharray="5 4"/>
+<g style="animation:m10 9s cubic-bezier(.6,0,.3,1) infinite"><rect x="100" y="113" width="68" height="18" rx="9" fill="#101112" stroke="#fbbf24" stroke-opacity=".8"/><text x="109" y="125.5" class="mini" style="fill:#c0c3c9">J-90</text><text x="160" y="125.5" text-anchor="end" class="mini" style="fill:#63666e">$$$</text></g>
+<g style="animation:m11 9s cubic-bezier(.6,0,.3,1) infinite"><rect x="172" y="113" width="68" height="18" rx="9" fill="#101112" stroke="#fbbf24" stroke-opacity=".8"/><text x="181" y="125.5" class="mini" style="fill:#c0c3c9">J-57</text><text x="232" y="125.5" text-anchor="end" class="mini" style="fill:#63666e">$</text></g>
+<g style="animation:m12 9s cubic-bezier(.6,0,.3,1) infinite"><rect x="244" y="113" width="68" height="18" rx="9" fill="#101112" stroke="#fbbf24" stroke-opacity=".8"/><text x="253" y="125.5" class="mini" style="fill:#c0c3c9">J-87</text><text x="304" y="125.5" text-anchor="end" class="mini" style="fill:#63666e">$$</text></g>
+<g style="animation:m13 9s cubic-bezier(.6,0,.3,1) infinite"><rect x="316" y="113" width="68" height="18" rx="9" fill="#101112" stroke="#fbbf24" stroke-opacity=".8"/><text x="325" y="125.5" class="mini" style="fill:#c0c3c9">J-95</text><text x="376" y="125.5" text-anchor="end" class="mini" style="fill:#63666e">$$</text></g>
+<g style="animation:m14 9s cubic-bezier(.6,0,.3,1) infinite"><rect x="388" y="113" width="68" height="18" rx="9" fill="#101112" stroke="#fbbf24" stroke-opacity=".8"/><text x="397" y="125.5" class="mini" style="fill:#c0c3c9">J-74</text><text x="448" y="125.5" text-anchor="end" class="mini" style="fill:#63666e">$</text></g>
+<text x="22" y="156" class="mini" style="fill:#35d3ee">ROUTINE</text>
+<line class="bar" x1="100" y1="137" x2="546" y2="137" stroke="#7d8189" stroke-dasharray="5 4"/>
+<g style="animation:m20 9s cubic-bezier(.6,0,.3,1) infinite"><g class="try"><rect x="100" y="143" width="68" height="18" rx="9" fill="#101112" stroke="#35d3ee" stroke-opacity=".8"/><text x="109" y="155.5" class="mini" style="fill:#c0c3c9">J-75</text><text x="160" y="155.5" text-anchor="end" class="mini" style="fill:#63666e">$</text></g></g>
+<g style="animation:m21 9s cubic-bezier(.6,0,.3,1) infinite"><rect x="172" y="143" width="68" height="18" rx="9" fill="#101112" stroke="#35d3ee" stroke-opacity=".8"/><text x="181" y="155.5" class="mini" style="fill:#c0c3c9">J-62</text><text x="232" y="155.5" text-anchor="end" class="mini" style="fill:#63666e">$$</text></g>
+<g style="animation:m22 9s cubic-bezier(.6,0,.3,1) infinite"><rect x="244" y="143" width="68" height="18" rx="9" fill="#101112" stroke="#35d3ee" stroke-opacity=".8"/><text x="253" y="155.5" class="mini" style="fill:#c0c3c9">J-86</text><text x="304" y="155.5" text-anchor="end" class="mini" style="fill:#63666e">$$</text></g>
+<g style="animation:m23 9s cubic-bezier(.6,0,.3,1) infinite"><rect x="316" y="143" width="68" height="18" rx="9" fill="#101112" stroke="#35d3ee" stroke-opacity=".8"/><text x="325" y="155.5" class="mini" style="fill:#c0c3c9">J-65</text><text x="376" y="155.5" text-anchor="end" class="mini" style="fill:#63666e">$$</text></g>
+<g style="animation:m24 9s cubic-bezier(.6,0,.3,1) infinite"><rect x="388" y="143" width="68" height="18" rx="9" fill="#101112" stroke="#35d3ee" stroke-opacity=".8"/><text x="397" y="155.5" class="mini" style="fill:#c0c3c9">J-30</text><text x="448" y="155.5" text-anchor="end" class="mini" style="fill:#63666e">$</text></g>
+<g class="lock"><rect x="296" y="20" width="246" height="22" rx="4" fill="#2a0d0d" stroke="#ef4444"/><text x="419" y="35" text-anchor="middle" class="mini" style="fill:#fecaca">BLOCKED · CAN'T CROSS A NEED BAND</text></g>
+<text x="542" y="62" text-anchor="end" class="mini">$ = COST TO SERVE · NEVER MERGED WITH NEED</text>
+<g transform="translate(16,14)"><rect width="209.1" height="58" rx="8" fill="#101112" fill-opacity=".82" stroke="#26282c"/><text x="11" y="31" class="big">2 scores</text><text x="11" y="48" class="cap">NEED AND COST, NEVER MERGED</text></g>
+</g>
+<line x1="1" y1="172" x2="559" y2="172" stroke="#26282c"/>
+<text x="24" y="204" class="code">RESPONSIBLE AI · CDU CODE FAIR 2026</text>
+<g transform="translate(445.2,188)"><rect width="94.8" height="22" rx="11" fill="#101112" stroke="#fbbf24" stroke-opacity=".55"/><circle class="blink" cx="12" cy="11" r="3.5" fill="#fbbf24"/><text x="22" y="15" class="pill" fill="#fbbf24">CODE FAIR</text></g>
+<text x="24" y="236" class="ttl">FairFix NT</text>
+<text x="24" y="264" class="txt">Explainable triage for remote housing repairs: logistics</text><text x="24" y="286" class="txt">may reorder jobs within a need band, never across one.</text>
+<text x="24" y="314" class="stk">Python · Streamlit · fairness test suite · 200 tests</text>
+</svg>

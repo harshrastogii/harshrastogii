@@ -1,0 +1,39 @@
+name: Redraw field signal
+
+on:
+  schedule:
+    - cron: "41 18 * * *" # 04:11 in Darwin
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/render_pulse.py
+      - scripts/svgkit.py
+      - .github/workflows/field-signal.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: field-signal
+  cancel-in-progress: false
+
+jobs:
+  redraw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Render the seismograph from the contribution calendar
+        env:
+          # Optional: a PROFILE_TOKEN secret (read:user) also counts private contributions.
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+        run: python scripts/render_pulse.py
+      - name: Commit if anything changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/pulse.svg data/pulse.json
+          git diff --cached --quiet || { git commit -m "Redraw field signal" && git push; }
