@@ -1293,7 +1293,7 @@
   },
   {
    "date": "2026-08-16",
-   "count": 1
+   "count": 0
   },
   {
    "date": "2026-08-17",
@@ -1481,33 +1481,33 @@
   },
   {
    "date": "2026-10-02",
-   "count": 12
+   "count": 19
   }
  ],
  "languages": [
   {
    "name": "HTML",
-   "share": 0.6699
+   "share": 0.6945
   },
   {
    "name": "Jupyter Notebook",
-   "share": 0.1985
+   "share": 0.2058
   },
   {
    "name": "Python",
-   "share": 0.08
-  },
-  {
-   "name": "TypeScript",
-   "share": 0.0192
+   "share": 0.0593
   },
   {
    "name": "JavaScript",
-   "share": 0.0174
+   "share": 0.018
   },
   {
    "name": "CSS",
-   "share": 0.0147
+   "share": 0.0152
+  },
+  {
+   "name": "TypeScript",
+   "share": 0.0071
   }
  ]
 }
