@@ -21,10 +21,11 @@ EMBER = "#f97316"
 RED = "#ef4444"
 
 SANS = "'Plus Jakarta Sans','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif"
-MONO = "'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
 
-# Respect reduced-motion settings for everything driven by CSS.
-REDUCED = "@media (prefers-reduced-motion: reduce){*{animation:none!important}}"
+# Reduced motion: skip straight to each animation's end state rather than
+# switching animations off, so fade-ins still finish visible.
+REDUCED = ("@media (prefers-reduced-motion: reduce){*{animation-duration:0s!important;"
+           "animation-delay:0s!important;animation-iteration-count:1!important}}")
 
 
 def esc(text):
@@ -73,22 +74,6 @@ def periodic_noise(rng, period, harmonics=5):
     def fn(x):
         return sum(a * math.sin(math.tau * k * x / period + p) for k, p, a in terms) / norm
     return fn
-
-
-def mono_width(text, size):
-    return len(text) * size * 0.6
-
-
-def chip(x, y, text, size, fg, bg, stroke, pad=10, h=None, cls=""):
-    h = h or size + 12
-    w = mono_width(text, size) + pad * 2
-    c = f' class="{cls}"' if cls else ""
-    return (
-        f'<g{c}><rect x="{f(x)}" y="{f(y)}" width="{f(w)}" height="{f(h)}" rx="{f(h / 2)}" '
-        f'fill="{bg}" stroke="{stroke}"/>'
-        f'<text x="{f(x + pad)}" y="{f(y + h / 2 + size * 0.35)}" '
-        f'style="font:500 {size}px {MONO};fill:{fg}">{esc(text)}</text></g>'
-    ), w
 
 
 def rng(seed):

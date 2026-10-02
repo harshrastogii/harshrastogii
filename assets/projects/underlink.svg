@@ -1,67 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="330" viewBox="0 0 560 330" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="296" viewBox="0 0 560 296" role="img" aria-labelledby="t d">
 <title id="t">Underlink</title>
-<desc id="d">Underlink: a relay chain from fibre to a remote community; one single-path relay fails and the community loses signal. 18 of 23 radio-chain places depend on such a relay.</desc>
+<desc id="d">A radio relay chain from fibre to a remote community. When a single-path relay fails, the community loses signal. 18 of 23 radio-chain places depend on such a relay.</desc>
 <style>
-.code{font:500 11.5px 'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;fill:#35d3ee;letter-spacing:.16em}
-.ttl{font:700 27px 'Plus Jakarta Sans','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;fill:#e6e8ec;letter-spacing:-.01em}
-.txt{font:400 15.5px 'Plus Jakarta Sans','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;fill:#9ca0a8}
-.stk{font:400 11.5px 'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;fill:#7d8189}
-.big{font:700 30px 'Plus Jakarta Sans','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;fill:#e6e8ec;letter-spacing:-.02em}
-.cap{font:500 10.5px 'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;fill:#9ca0a8;letter-spacing:.06em}
-.mini{font:500 9.5px 'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;fill:#7d8189;letter-spacing:.08em}
-.pill{font:600 10px 'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;letter-spacing:.12em}
-.blink{animation:blink 1.6s ease-in-out infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.ttl{font:600 23px 'Plus Jakarta Sans','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;fill:#e6e8ec;letter-spacing:-.01em}
+.txt{font:400 15px 'Plus Jakarta Sans','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;fill:#9ca0a8}
+.stk{font:400 12.5px 'Plus Jakarta Sans','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;fill:#63666e}
+.lbl{font:400 11.5px 'Plus Jakarta Sans','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;fill:#9ca0a8}
+.lbl2{font:500 11.5px 'Plus Jakarta Sans','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;fill:#e6e8ec}
 
-.down{animation:down 8s ease-in-out infinite}
-@keyframes down{0%,52%,84%,100%{opacity:1}58%,78%{opacity:.18}}
-.flt{animation:flt 8s ease-in-out infinite}
-@keyframes flt{0%,50%,86%,100%{fill:#35d3ee;stroke:#35d3ee}54%,80%{fill:#ef4444;stroke:#ef4444}}
-.ring{transform-box:fill-box;transform-origin:center;animation:ring 8s ease-out infinite;opacity:0}
-@keyframes ring{0%,52%{opacity:0;transform:scale(.3)}56%{opacity:.9}74%{opacity:0;transform:scale(2.4)}100%{opacity:0}}
-.warn{animation:warn 8s ease-in-out infinite;opacity:0}
-@keyframes warn{0%,53%,82%,100%{opacity:0}57%,78%{opacity:1}}
-.pk{animation:pk 8s linear infinite}
-@keyframes pk{0%,52%,82%,100%{opacity:1}55%,79%{opacity:0}}
-@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
-<defs>
-<clipPath id="band"><path d="M1,172 V14 a13,13 0 0 1 13,-13 H546 a13,13 0 0 1 13,13 V172 Z"/></clipPath>
-<pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20,0 H0 V20" fill="none" stroke="#1f2023" stroke-width="1"/></pattern>
-<linearGradient id="cardg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17181a"/><stop offset="1" stop-color="#141517"/></linearGradient>
-</defs>
-<rect x=".5" y=".5" width="559" height="329" rx="14" fill="url(#cardg)" stroke="#26282c"/>
-<g clip-path="url(#band)"><rect width="560" height="172" fill="#0c0d0e"/><rect width="560" height="172" fill="url(#grid)" opacity=".7"/>
-<path d="M150,104 Q232,184 314,98" fill="none" stroke="#4e5158" stroke-dasharray="3 4"/>
-<text x="232" y="162" text-anchor="middle" class="mini">ALT PATH</text>
-<path d="M70,128 L150,104 L232,132 L314,98 L398,130" fill="none" stroke="#06b6d4" stroke-width="1.6"/>
-<path class="down" d="M398,130 L470,102 L526,128" fill="none" stroke="#06b6d4" stroke-width="1.6"/>
-<path id="chain" d="M70,128 L150,104 L232,132 L314,98 L398,130 L470,102 L526,128" fill="none"/>
-<text x="110" y="134" text-anchor="middle" class="mini" opacity=".7">1</text>
-<text x="191" y="136" text-anchor="middle" class="mini" opacity=".7">2</text>
-<text x="273" y="133" text-anchor="middle" class="mini" opacity=".7">3</text>
-<text x="356" y="132" text-anchor="middle" class="mini" opacity=".7">4</text>
-<text x="434" y="134" text-anchor="middle" class="mini" opacity=".7">5</text>
-<text x="498" y="133" text-anchor="middle" class="mini" opacity=".7">6</text>
-<rect x="48" y="116" width="44" height="24" rx="5" fill="#06353f" stroke="#35d3ee"/><text x="70" y="132" text-anchor="middle" class="mini" style="fill:#8be9f7">FIBRE</text>
-<g fill="#35d3ee" stroke="#35d3ee"><g transform="translate(150,104)"><path d="M0,-14 L-7,6 M0,-14 L7,6 M-4.5,-2 H4.5" fill="none" stroke-width="1.6" stroke-linecap="round"/><circle cy="-15" r="2.6" stroke="none"/></g></g>
-<g fill="#35d3ee" stroke="#35d3ee"><g transform="translate(232,132)"><path d="M0,-14 L-7,6 M0,-14 L7,6 M-4.5,-2 H4.5" fill="none" stroke-width="1.6" stroke-linecap="round"/><circle cy="-15" r="2.6" stroke="none"/></g></g>
-<g fill="#35d3ee" stroke="#35d3ee"><g transform="translate(314,98)"><path d="M0,-14 L-7,6 M0,-14 L7,6 M-4.5,-2 H4.5" fill="none" stroke-width="1.6" stroke-linecap="round"/><circle cy="-15" r="2.6" stroke="none"/></g></g>
-<circle class="ring" cx="398" cy="124" r="16" fill="none" stroke="#ef4444" stroke-width="1.5"/>
-<g transform="translate(398,130)" class="flt"><path d="M0,-14 L-7,6 M0,-14 L7,6 M-4.5,-2 H4.5" fill="none" stroke-width="1.6" stroke-linecap="round"/><circle cy="-15" r="2.6" stroke="none"/></g>
-<g class="down"><g fill="#35d3ee" stroke="#35d3ee"><g transform="translate(470,102)"><path d="M0,-14 L-7,6 M0,-14 L7,6 M-4.5,-2 H4.5" fill="none" stroke-width="1.6" stroke-linecap="round"/><circle cy="-15" r="2.6" stroke="none"/></g></g></g>
-<g class="down"><path d="M515,137 V126 L526,117 L537,126 V137 Z" fill="#08361d" stroke="#31d46c" stroke-width="1.5"/></g>
-<text x="526" y="154" text-anchor="middle" class="mini">COMMUNITY</text>
-<g class="pk"><circle r="3" fill="#ecfeff"><animateMotion dur="4s" begin="0.00s" repeatCount="indefinite"><mpath href="#chain"/></animateMotion></circle></g>
-<g class="pk"><circle r="3" fill="#ecfeff"><animateMotion dur="4s" begin="1.33s" repeatCount="indefinite"><mpath href="#chain"/></animateMotion></circle></g>
-<g class="pk"><circle r="3" fill="#ecfeff"><animateMotion dur="4s" begin="2.66s" repeatCount="indefinite"><mpath href="#chain"/></animateMotion></circle></g>
-<g class="warn"><rect x="332" y="78" width="132" height="20" rx="4" fill="#2a0d0d" stroke="#ef4444"/><text x="398" y="92" text-anchor="middle" class="mini" style="fill:#fecaca">SINGLE-PATH RELAY</text></g>
-<g class="warn"><text x="526" y="106" text-anchor="middle" class="mini" style="fill:#fecaca">NO SIGNAL</text></g>
-<g transform="translate(16,14)"><rect width="264.6" height="58" rx="8" fill="#101112" fill-opacity=".82" stroke="#26282c"/><text x="11" y="31" class="big">18 / 23</text><text x="11" y="48" class="cap">RADIO-CHAIN PLACES ON A SINGLE PATH</text></g>
+.down{animation:down 10s ease-in-out infinite}
+@keyframes down{0%,50%,86%,100%{opacity:1}56%,80%{opacity:.15}}
+.flt{animation:flt 10s ease-in-out infinite}
+@keyframes flt{0%,48%,88%,100%{stroke:#35d3ee}52%,82%{stroke:#ef4444}}
+.warn{opacity:0;animation:warn 10s ease-in-out infinite}
+@keyframes warn{0%,51%,84%,100%{opacity:0}56%,80%{opacity:1}}
+.pk{animation:pk 10s linear infinite}
+@keyframes pk{0%,50%,84%,100%{opacity:1}53%,81%{opacity:0}}
+@media (prefers-reduced-motion: reduce){*{animation-duration:0s!important;animation-delay:0s!important;animation-iteration-count:1!important}}</style>
+<defs><clipPath id="band"><path d="M1,176 V9 a8,8 0 0 1 8,-8 H551 a8,8 0 0 1 8,8 V176 Z"/></clipPath></defs>
+<rect x=".5" y=".5" width="559" height="295" rx="8.5" fill="#101112" stroke="#26282c"/>
+<g clip-path="url(#band)">
+<path d="M140,88 Q224,164 308,84" fill="none" stroke="#3d4046"/>
+<text x="224" y="158" text-anchor="middle" class="lbl">alternative path</text>
+<path d="M56,112 L140,88 L224,116 L308,84 L392,114" fill="none" stroke="#06b6d4" stroke-width="1.5"/>
+<path class="down" d="M392,114 L470,88 L520,112" fill="none" stroke="#06b6d4" stroke-width="1.5"/>
+<path id="chain" d="M56,112 L140,88 L224,116 L308,84 L392,114 L470,88 L520,112" fill="none"/>
+<rect x="36" y="101" width="40" height="22" rx="4" fill="#101112" stroke="#06b6d4"/><text x="56" y="116" text-anchor="middle" class="lbl2">Fibre</text>
+<g transform="translate(140,88)" stroke="#35d3ee" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M0,-13 L-6,6 M0,-13 L6,6 M-3.8,-2 H3.8"/></g>
+<g transform="translate(224,116)" stroke="#35d3ee" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M0,-13 L-6,6 M0,-13 L6,6 M-3.8,-2 H3.8"/></g>
+<g transform="translate(308,84)" stroke="#35d3ee" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M0,-13 L-6,6 M0,-13 L6,6 M-3.8,-2 H3.8"/></g>
+<g transform="translate(392,114)" class="flt" stroke="#35d3ee" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M0,-13 L-6,6 M0,-13 L6,6 M-3.8,-2 H3.8"/></g>
+<g class="down"><g transform="translate(470,88)" stroke="#35d3ee" fill="none" stroke-width="1.5" stroke-linecap="round"><path d="M0,-13 L-6,6 M0,-13 L6,6 M-3.8,-2 H3.8"/></g></g>
+<g class="down"><path d="M510,120 V110 L520,102 L530,110 V120 Z" fill="#08361d" stroke="#31d46c" stroke-width="1.4"/></g>
+<text x="532" y="138" text-anchor="end" class="lbl">Community</text>
+<g class="pk"><circle r="2.6" fill="#e6fbff"><animateMotion dur="5s" begin="0.0s" repeatCount="indefinite"><mpath href="#chain"/></animateMotion></circle></g>
+<g class="pk"><circle r="2.6" fill="#e6fbff"><animateMotion dur="5s" begin="2.5s" repeatCount="indefinite"><mpath href="#chain"/></animateMotion></circle></g>
+<g class="warn"><text x="392" y="88" text-anchor="middle" class="lbl2">Single-path relay fails</text><text x="532" y="92" text-anchor="end" class="lbl2">No signal</text></g>
+<text x="22" y="32" class="lbl">One radio chain from fibre to a remote community, up to six hops</text>
 </g>
-<line x1="1" y1="172" x2="559" y2="172" stroke="#26282c"/>
-<text x="24" y="204" class="code">CONNECTIVITY · CDU CODE FAIR 2026</text>
-<g transform="translate(481.2,188)"><rect width="58.8" height="22" rx="11" fill="#101112" stroke="#31d46c" stroke-opacity=".55"/><circle class="blink" cx="12" cy="11" r="3.5" fill="#31d46c"/><text x="22" y="15" class="pill" fill="#31d46c">LIVE</text></g>
-<text x="24" y="236" class="ttl">Underlink</text>
-<text x="24" y="264" class="txt">Finds the radio relays remote NT communities can't</text><text x="24" y="286" class="txt">route around, from the public ACMA licence register.</text>
-<text x="24" y="314" class="stk">Python · graph analysis · Panel · vanilla JS</text>
+<line x1="1" y1="176.5" x2="559" y2="176.5" stroke="#26282c"/>
+<text x="22" y="210" class="ttl">Underlink</text>
+<text x="22" y="238" class="txt">18 of 23 remote places that reach fibre by radio rely</text><text x="22" y="259" class="txt">on a relay with no other licensed path.</text>
+<text x="22" y="280" class="stk">Python, graph analysis, Panel. Built for the CDU Code Fair 2026.</text>
 </svg>
