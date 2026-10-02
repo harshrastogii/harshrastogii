@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="232" height="60" viewBox="0 0 232 60" role="img" aria-labelledby="t d">
+<title id="t">Portfolio: harshrastogi.au</title>
+<desc id="d">Portfolio link button</desc>
+<style>
+.lb{font:600 11px 'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;letter-spacing:.2em}
+.vl{font:600 15.5px 'Plus Jakarta Sans','Segoe UI','Helvetica Neue',Helvetica,Arial,sans-serif;fill:#e6e8ec;letter-spacing:-.005em}
+.shine{animation:shine 7s ease-in-out infinite;animation-delay:0.00s}
+@keyframes shine{0%,72%{transform:translateX(-90px)}100%{transform:translateX(322px)}}
+.dot{animation:dot 2.4s ease-in-out infinite;animation-delay:0.00s}
+@keyframes dot{0%,100%{opacity:.35}50%{opacity:1}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17181a"/><stop offset="1" stop-color="#101112"/></linearGradient>
+<linearGradient id="sh" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="c"><rect x="1" y="1" width="230" height="58" rx="13"/></clipPath>
+</defs>
+<rect x=".5" y=".5" width="231" height="59" rx="13.5" fill="url(#bg)" stroke="#303237"/>
+<g clip-path="url(#c)"><rect x="0" y="58" width="232" height="2" fill="#35d3ee" opacity=".55"/>
+<rect class="shine" x="0" y="0" width="70" height="60" fill="url(#sh)" transform="skewX(-20)"/></g>
+<rect x="12" y="12" width="36" height="36" rx="10" fill="#35d3ee" fill-opacity=".1" stroke="#35d3ee" stroke-opacity=".35"/>
+<g transform="translate(18,18)" fill="none" stroke="#35d3ee" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 7.5h14M5 16.5h14"/></g>
+<text x="62" y="26" class="lb" fill="#35d3ee">PORTFOLIO</text>
+<text x="62" y="45" class="vl">harshrastogi.au</text>
+<circle class="dot" cx="214" cy="30.0" r="3" fill="#35d3ee"/>
+</svg>

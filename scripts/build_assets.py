@@ -848,8 +848,57 @@ def build_footer():
     return svg
 
 
+# ---------------------------------------------------------------------------
+# Link buttons: one consistent family instead of mismatched badges
+# ---------------------------------------------------------------------------
+
+BUTTONS = [
+    # slug, label, value, accent, icon (drawn in a 24x24 box)
+    ("portfolio", "PORTFOLIO", "harshrastogi.au", TEAL[8],
+     '<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 7.5h14M5 16.5h14"/>'),
+    ("writing", "WRITING", "field notes", GREEN[8],
+     '<path d="M5 3h10l4 4v14H5z"/><path d="M15 3v4h4M8 11h8M8 14.5h8M8 18h5"/>'),
+    ("linkedin", "LINKEDIN", "/in/harshrastogii", BLUE[8],
+     '<rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 10.5V17M8 7.2v.1M11.5 17v-6.5M11.5 13.2c0-1.7 1.2-2.9 2.6-2.9 1.5 0 2.4 1 2.4 2.9V17"/>'),
+    ("email", "EMAIL", "get in touch", AMBER,
+     '<rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.8 7l8.2 6 8.2-6"/>'),
+]
+
+
+def build_button(i, label, value, accent, icon):
+    W, H = 232, 60
+    css = f"""
+.lb{{font:600 11px {MONO};letter-spacing:.2em}}
+.vl{{font:600 15.5px {SANS};fill:{INK[12]};letter-spacing:-.005em}}
+.shine{{animation:shine 7s ease-in-out infinite;animation-delay:{i * 0.45:.2f}s}}
+@keyframes shine{{0%,72%{{transform:translateX(-90px)}}100%{{transform:translateX({W + 90}px)}}}}
+.dot{{animation:dot 2.4s ease-in-out infinite;animation-delay:{i * 0.3:.2f}s}}
+@keyframes dot{{0%,100%{{opacity:.35}}50%{{opacity:1}}}}
+"""
+    body = f"""<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{INK[2]}"/><stop offset="1" stop-color="{INK[1]}"/></linearGradient>
+<linearGradient id="sh" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".07"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="c"><rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="13"/></clipPath>
+</defs>
+<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="13.5" fill="url(#bg)" stroke="{INK[5]}"/>
+<g clip-path="url(#c)"><rect x="0" y="{H - 2}" width="{W}" height="2" fill="{accent}" opacity=".55"/>
+<rect class="shine" x="0" y="0" width="70" height="{H}" fill="url(#sh)" transform="skewX(-20)"/></g>
+<rect x="12" y="12" width="36" height="36" rx="10" fill="{accent}" fill-opacity=".1" stroke="{accent}" stroke-opacity=".35"/>
+<g transform="translate(18,18)" fill="none" stroke="{accent}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">{icon}</g>
+<text x="62" y="26" class="lb" fill="{accent}">{label}</text>
+<text x="62" y="45" class="vl">{esc(value)}</text>
+<circle class="dot" cx="{W - 18}" cy="{H / 2}" r="3" fill="{accent}"/>"""
+    return document(W, H, f"{label.title()}: {value}", f"{label.title()} link button", css, body)
+
+
+def build_buttons():
+    for i, (slug, label, value, accent, icon) in enumerate(BUTTONS):
+        write(f"buttons/{slug}.svg", build_button(i, label, value, accent, icon))
+
+
 if __name__ == "__main__":
     write("hero.svg", build_hero())
     build_cards()
     write("strata.svg", build_strata())
     write("footer.svg", build_footer())
+    build_buttons()
