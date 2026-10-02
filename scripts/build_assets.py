@@ -612,47 +612,59 @@ def viz_rainsignal():
     return "\n".join(out), css
 
 
-def viz_fairfix():
-    r = rng(4)
-    lanes = [("URGENT", RED, 92), ("HIGH", AMBER, 122), ("ROUTINE", TEAL[8], 152)]
-    css = """
-.sh{animation:sh 9s cubic-bezier(.6,0,.3,1) infinite}
-.try{animation:try 9s cubic-bezier(.5,0,.3,1) infinite}
-@keyframes try{0%,58%,82%,100%{transform:translateY(0)}66%{transform:translateY(-13px)}70%{transform:translateY(-9px)}74%{transform:translateY(0)}}
-.bar{animation:bar 9s ease infinite}
-@keyframes bar{0%,62%,80%,100%{stroke-opacity:.35}66%,72%{stroke-opacity:1;stroke:#ef4444}}
-.lock{animation:lock 9s ease infinite;opacity:0}
-@keyframes lock{0%,62%,82%,100%{opacity:0}66%,78%{opacity:1}}
+def viz_roadstate():
+    r = rng(6)
+    cyc = 12
+    months = ["JUL", "AUG", "SEP", "OCT", "NOV", "DEC", "JAN", "FEB", "MAR", "APR", "MAY", "JUN"]
+    x0, span, split = 20, 520, 236
+    ry = 112
+    css = f"""
+.lane{{stroke-dasharray:10 8;animation:lane .8s linear infinite}}
+@keyframes lane{{to{{stroke-dashoffset:-18}}}}
+.city{{animation:city 1.6s linear infinite}}
+@keyframes city{{from{{transform:translateX(-26px)}}to{{transform:translateX(0)}}}}
+.far{{animation:far {cyc}s linear infinite}}
+@keyframes far{{from{{transform:translateX(0)}}to{{transform:translateX(312px)}}}}
+.dry{{animation:dry {cyc}s ease-in-out infinite}}
+@keyframes dry{{0%,34%,84%,100%{{opacity:1}}38%,80%{{opacity:.08}}}}
+.wet{{opacity:0;animation:wet {cyc}s ease-in-out infinite}}
+@keyframes wet{{0%,33%,84%,100%{{opacity:0}}38%,80%{{opacity:1}}}}
+.drop{{animation:drop .8s linear infinite}}
+@keyframes drop{{from{{transform:translate(0,-40px)}}to{{transform:translate(-10px,40px)}}}}
+.scrub{{animation:scrub {cyc}s linear infinite}}
+@keyframes scrub{{from{{transform:translateX(0)}}to{{transform:translateX({span}px)}}}}
 """
-    out = []
-    xs = [100, 172, 244, 316, 388, 460]
-    kf = []
-    for li, (name, col, y) in enumerate(lanes):
-        out.append(f'<text x="22" y="{y + 4}" class="mini" style="fill:{col}">{name}</text>')
-        if li:
-            out.append(f'<line class="bar" x1="100" y1="{y - 15}" x2="546" y2="{y - 15}" stroke="{INK[9]}" stroke-dasharray="5 4"/>')
-        p1, p2 = list(range(6)), list(range(6))
-        r.shuffle(p1)
-        r.shuffle(p2)
-        for j in range(5):
-            a = xs[p1.index(j)] - xs[j]
-            b = xs[p2.index(j)] - xs[j]
-            name_k = f"m{li}{j}"
-            kf.append(f"@keyframes {name_k}{{0%,20%,100%{{transform:translateX(0)}}25%,50%{{transform:translateX({a}px)}}55%,93%{{transform:translateX({b}px)}}}}")
-            label = f"J-{r.randint(10, 99)}"
-            cost = r.choice(["$", "$$", "$$$"])
-            inner = (f'<rect x="{xs[j]}" y="{y - 9}" width="68" height="18" rx="9" fill="{INK[1]}" stroke="{col}" stroke-opacity=".8"/>'
-                     f'<text x="{xs[j] + 9}" y="{y + 3.5}" class="mini" style="fill:{INK[11]}">{label}</text>'
-                     f'<text x="{xs[j] + 60}" y="{y + 3.5}" text-anchor="end" class="mini" style="fill:{INK[8]}">{cost}</text>')
-            anim = f"animation:{name_k} 9s cubic-bezier(.6,0,.3,1) infinite"
-            if li == 2 and j == 0:
-                out.append(f'<g style="{anim}"><g class="try">{inner}</g></g>')
-            else:
-                out.append(f'<g style="{anim}">{inner}</g>')
-    out.append(f'<g class="lock"><rect x="296" y="20" width="246" height="22" rx="4" fill="#2a0d0d" stroke="{RED}"/>'
-               f'<text x="419" y="35" text-anchor="middle" class="mini" style="fill:#fecaca">BLOCKED · CAN\'T CROSS A NEED BAND</text></g>')
-    out.append(f'<text x="542" y="62" text-anchor="end" class="mini">$ = COST TO SERVE · NEVER MERGED WITH NEED</text>')
-    return "\n".join(out), css + "".join(kf)
+    out = [f'<clipPath id="cityc"><rect x="{x0}" y="{ry - 14}" width="{split - x0}" height="28"/></clipPath>',
+           f'<clipPath id="farc"><rect x="{split}" y="{ry - 14}" width="{x0 + span - split}" height="28"/></clipPath>',
+           f'<rect x="{x0}" y="{ry - 11}" width="{span}" height="22" rx="4" fill="{INK[3]}"/>',
+           f'<line class="lane" x1="{x0}" y1="{ry}" x2="{x0 + span}" y2="{ry}" stroke="{INK[8]}" stroke-width="1.4"/>',
+           f'<line x1="{split}" y1="{ry - 20}" x2="{split}" y2="{ry + 16}" stroke="{INK[7]}" stroke-dasharray="2 3"/>',
+           f'<text x="{x0}" y="{ry - 22}" class="mini" style="fill:{TEAL[9]}">DARWIN · 78% OF TRAFFIC</text>',
+           f'<text x="{split + 8}" y="{ry - 22}" class="mini">REMOTE ROADS</text>']
+    cars = "".join(f'<rect x="{x0 - 26 + k * 26}" y="{ry - 7 + (k % 2) * 8}" width="14" height="6" rx="2" fill="{AMBER if k % 3 else "#fff7d6"}"/>'
+                   for k in range(10))
+    out.append(f'<g clip-path="url(#cityc)"><g class="city">{cars}</g></g>')
+    far = "".join(f'<rect x="{split - 20 + k * 156}" y="{ry - 7 + (k % 2) * 8}" width="14" height="6" rx="2" fill="{AMBER}"/>'
+                  for k in range(-1, 2))
+    out.append(f'<g clip-path="url(#farc)"><g class="dry"><g class="far">{far}</g></g></g>')
+    rain = "".join(f'<line x1="{f(x)}" y1="{f(y)}" x2="{f(x - 3)}" y2="{f(y + 10)}"/>'
+                   for x, y in ((r.uniform(split + 4, 556), r.uniform(70, 150)) for _ in range(40)))
+    out.append(f'<g class="wet"><g class="drop" stroke="{BLUE[9]}" stroke-width="1" opacity=".55">{rain}</g></g>')
+    barriers = []
+    for bx in (318, 432, 512):
+        barriers.append(f'<g transform="translate({bx},{ry})"><rect x="-13" y="-6" width="26" height="12" rx="2" fill="{RED}"/>'
+                        f'<path d="M-9,-6 l6,12 M0,-6 l6,12" stroke="#fff" stroke-width="2.2"/></g>')
+    out.append(f'<g class="wet">{"".join(barriers)}<rect x="400" y="52" width="140" height="18" rx="3" fill="#2a0d0d" stroke="{RED}"/>'
+               f'<text x="470" y="64.5" text-anchor="middle" class="mini" style="fill:#fecaca">WET SEASON · ROAD CLOSED</text></g>')
+    my = 156
+    cw = span / 12
+    for i, m in enumerate(months):
+        wet = 4 <= i <= 9
+        out.append(f'<rect x="{f(x0 + i * cw + 1)}" y="{my - 9}" width="{f(cw - 2)}" height="3" rx="1.5" fill="{BLUE[8] if wet else INK[6]}"/>'
+                   f'<text x="{f(x0 + (i + 0.5) * cw)}" y="{my + 6}" text-anchor="middle" class="mini" style="fill:{BLUE[9] if wet else INK[9]}">{m}</text>')
+    out.append(f'<g class="scrub"><path d="M{x0},{my - 14} l-4,-6 h8 Z" fill="#fff" opacity=".8"/></g>')
+    out.append(f'<text x="540" y="30" text-anchor="end" class="mini" style="fill:{BLUE[9]}">NT ANNUAL TRAFFIC REPORT 2023</text>')
+    return "\n".join(out), css
 
 
 def build_cards():
@@ -706,13 +718,13 @@ def build_cards():
             stack="Python · scikit-learn · BoM feeds · Cloudflare Pages",
             stat="49", stat_cap="TOWNS · OBSERVED ≠ ESTIMATED",
             desc="RainSignal AU: rain falls over 49 town gauges; observed rainfall is drawn solid and model estimates dashed, never conflated.")),
-        ("fairfix", viz_fairfix, dict(
-            code="RESPONSIBLE AI · CDU CODE FAIR 2026", title="FairFix NT", status="CODE FAIR",
-            lines=["Explainable triage for remote housing repairs: logistics",
-                   "may reorder jobs within a need band, never across one."],
-            stack="Python · Streamlit · fairness test suite · 200 tests",
-            stat="2 scores", stat_cap="NEED AND COST, NEVER MERGED",
-            desc="FairFix NT: repair jobs shuffle within urgent, high and routine need bands; a job that tries to cross a band is blocked.")),
+        ("roadstate", viz_roadstate, dict(
+            code="TRANSPORT · CIVIC DATA", title="RoadState", status="LIVE",
+            lines=["The Territory's road problem is seasonal access, not",
+                   "congestion: traffic sits in Darwin, closures in the wet."],
+            stack="Next.js · TypeScript · Visx · Python ETL · open NT data",
+            stat="66%", stat_cap="OF CLOSURES BEGIN IN THE WET",
+            desc="RoadState: Darwin traffic keeps flowing while remote roads close as the wet season passes; 78% of traffic is in Darwin and 66% of closures begin in the wet.")),
     ]
     for slug, viz_fn, meta in projects:
         viz, css = viz_fn()
@@ -731,7 +743,7 @@ def build_strata():
         ("MAP", "where it happens matters", GREEN[8],
          ["GeoPandas", "MapLibre GL", "Leaflet", "Earth Engine", "hot-spot stats", "equal-area projections"]),
         ("MODEL", "and say what it can't tell you", BLUE[8],
-         ["scikit-learn", "gradient boosting", "PyTorch", "TensorFlow", "LSTM", "BirdNET", "fairness tests"]),
+         ["scikit-learn", "gradient boosting", "PyTorch", "TensorFlow", "LSTM", "BirdNET", "anomaly detection"]),
         ("DATA", "start with the question", AMBER,
          ["Python", "SQL", "PostgreSQL", "SQLite", "pandas", "Jupyter", "Plotly", "Power BI"]),
         ("AUTOMATE", "keeps running without me", "#c084fc",
@@ -787,7 +799,7 @@ def build_strata():
                 f'<circle cx="{drill_x}" cy="{top + 2}" r="14" fill="{TEAL[8]}" opacity=".18"/></g></g>')
     return document(W, H, "Toolkit, as a core sample",
                     "The stack drawn as geological strata, surface to bedrock: SHIP (Next.js, React, TypeScript, FastAPI, Streamlit, Panel, Cloudflare Workers, Vercel); "
-                    "MAP (GeoPandas, MapLibre GL, Leaflet, Earth Engine, hot-spot statistics); MODEL (scikit-learn, gradient boosting, PyTorch, TensorFlow, LSTM, BirdNET, fairness tests); "
+                    "MAP (GeoPandas, MapLibre GL, Leaflet, Earth Engine, hot-spot statistics); MODEL (scikit-learn, gradient boosting, PyTorch, TensorFlow, LSTM, BirdNET, anomaly detection); "
                     "DATA (Python, SQL, PostgreSQL, SQLite, pandas, Jupyter, Plotly, Power BI); AUTOMATE (GitHub Actions, scheduled pipelines, pytest, Docker, reproducible research).",
                     css, "\n".join(body))
 
