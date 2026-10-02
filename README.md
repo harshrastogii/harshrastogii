@@ -34,7 +34,7 @@
 </p>
 <p align="center">
   <a href="https://github.com/harshrastogii/rainsignal-au"><img width="49%" src="./assets/projects/rainsignal.svg" alt="RainSignal AU: live Bureau of Meteorology observations run through frozen rainfall models for 49 towns." /></a>
-  <a href="https://github.com/harshrastogii/FairFix"><img width="49%" src="./assets/projects/fairfix.svg" alt="FairFix NT: explainable triage for remote housing repairs where logistics can never move a job across a need band." /></a>
+  <a href="https://roadstate.harshrastogii.com"><img width="49%" src="./assets/projects/roadstate.svg" alt="RoadState: the Territory's road problem is seasonal access, not congestion. 78% of traffic is in Darwin and 66% of closures begin in the wet." /></a>
 </p>
 
 <details>
@@ -50,7 +50,6 @@
 | **TerraIQ** | A Territory-wide weather memory from 44 BOM stations, holding what the public feed drops after 72 hours. | [live](https://terraiq-nt.vercel.app/) |
 | **Avian Observatory** | On Territory audio, BirdNET confidently answers Bicknell's Thrush, a bird of the north-eastern US. A regional model reaches 0.88 on recordings it never saw. | [live](https://avianobservatory.vercel.app/) |
 | **BushMetrics** | The reserve network protects rugged northern country and skips the arid interior. The Tanami is a statistically significant cold spot at 0.6%. | [live](https://bushmetrics.vercel.app/) · [code](https://github.com/harshrastogii/bushmetrics) |
-| **FairFix NT** | Need and cost-to-serve are two scores, never merged. Logistics can reorder jobs within a need band but never across one, backed by a 200-test fairness suite. | [code](https://github.com/harshrastogii/FairFix) |
 | **RoadState** | The Territory's road problem is seasonal access, not congestion: 78% of traffic is in Darwin and 66% of the year's closures begin in the wet. | [live](https://roadstate.harshrastogii.com) · [code](https://github.com/harshrastogii/RoadState) |
 | **NT Crime Intelligence** | Switching from raw counts to per-capita rates reorders which communities are most affected. Ships a clean 2008–2026 public dataset. | [live](https://harshrastogii-nt-crime-dashboard.hf.space/) · [code](https://github.com/harshrastogii/nt-crime-dashboard) |
 | **ArmaWatch** | A mobile-friendly rebuild of Wage Peace's map of 127 Australian weapons-industry sites, with filters, summaries and CSV export. | [live](https://armawatch.vercel.app/) · [code](https://github.com/harshrastogii/ArmaWatch) |
@@ -73,7 +72,7 @@
 ## Toolkit
 
 <p align="center">
-  <img width="100%" src="./assets/strata.svg" alt="Toolkit as a core sample. Ship: Next.js, React, TypeScript, FastAPI, Streamlit, Panel, Cloudflare Workers, Vercel. Map: GeoPandas, MapLibre GL, Leaflet, Earth Engine. Model: scikit-learn, gradient boosting, PyTorch, TensorFlow, LSTM, BirdNET. Data: Python, SQL, PostgreSQL, SQLite, pandas, Jupyter, Plotly, Power BI. Automate: GitHub Actions, scheduled pipelines, pytest, Docker." />
+  <img width="100%" src="./assets/strata.svg" alt="Toolkit as a core sample. Ship: Next.js, React, TypeScript, FastAPI, Streamlit, Panel, Cloudflare Workers, Vercel. Map: GeoPandas, MapLibre GL, Leaflet, Earth Engine. Model: scikit-learn, gradient boosting, PyTorch, TensorFlow, LSTM, BirdNET, anomaly detection. Data: Python, SQL, PostgreSQL, SQLite, pandas, Jupyter, Plotly, Power BI. Automate: GitHub Actions, scheduled pipelines, pytest, Docker." />
 </p>
 
 ## Field signal
