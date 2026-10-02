@@ -1,119 +1,103 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:155e75,100:14b8a6&height=190&section=header&text=Harsh%20Rastogi&fontSize=48&fontColor=f8fafc&fontAlignY=38&desc=Data%20Science%20%E2%80%A2%20Spatial%20Analytics%20%E2%80%A2%20AI%20for%20Public%20Good&descAlignY=60&descSize=18&animation=fadeIn" alt="Harsh Rastogi — Data Science, Spatial Analytics and AI for Public Good" />
+<a href="https://harshrastogi.au/">
+  <img width="100%" src="./assets/hero.svg" alt="Harsh Rastogi, data scientist in Darwin, Northern Territory. I turn Territory data into decisions, not just dashboards." />
+</a>
 
 <p align="center">
-  <strong>Master of Data Science student at Charles Darwin University</strong><br />
-  Building practical, transparent data products for biodiversity, civic technology, and public decision-making in the Northern Territory.
-</p>
-
-<p align="center">
-  <a href="https://harshrastogii.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-0f172a?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
+  <a href="https://harshrastogi.au/"><img src="https://img.shields.io/badge/harshrastogi.au-101112?style=for-the-badge&logo=vercel&logoColor=35d3ee" alt="Portfolio: harshrastogi.au" /></a>
+  <a href="https://harshrastogi.au/articles"><img src="https://img.shields.io/badge/Writing-101112?style=for-the-badge&logoColor=31d46c" alt="Writing" /></a>
   <a href="https://www.linkedin.com/in/harshrastogii/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:harshrastogi636@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <img src="https://komarev.com/ghpvc/?username=harshrastogii&style=for-the-badge&color=0f766e&label=PROFILE+VIEWS" alt="Profile views" />
+  <a href="mailto:harshrastogi636@gmail.com"><img src="https://img.shields.io/badge/Email-101112?style=for-the-badge&logo=gmail&logoColor=fbbf24" alt="Email" /></a>
+  <img src="https://komarev.com/ghpvc/?username=harshrastogii&style=for-the-badge&color=0090ab&label=PROFILE+VIEWS" alt="Profile views" />
 </p>
-
-## About me
-
-I turn complex data into clear, useful tools. Across my projects, I combine **spatial analytics, machine learning, data visualisation, civic technology, AI, and biodiversity science**—with an emphasis on reproducibility, transparency, and decisions that matter in the real world.
-
-```text
-Degree       Master of Data Science · Charles Darwin University
-Based in     Darwin, Northern Territory, Australia
-Community    Northern Territory Lead · GovHack
-Building     Data products that make public, environmental, and community data easier to use
-```
 
 <p align="center">
-  <img width="100%" src="./assets/nt-data-field-atlas.svg" alt="Northern Territory Data Field Atlas: biodiversity, civic intelligence, and responsible AI" />
+  <b>Master of Data Science at Charles Darwin University · Treasury analyst turned data scientist · GovHack NT Lead</b><br />
+  Environmental intelligence, spatial analysis and full-stack delivery: taking open Territory data from a raw feed<br />
+  to something a council, a researcher or a traveller can actually act on.
 </p>
 
-## Featured work
+## Field instruments
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🌧️ <a href="https://github.com/harshrastogii/rainsignal-au">RainSignal AU</a></h3>
-      <p>A transparent rainfall-intelligence project connecting live Bureau of Meteorology observations with frozen, evaluated machine-learning models for 49 Australian towns.</p>
-      <sub>Python · machine learning · BoM data · data validation</sub>
-    </td>
-    <td width="50%" valign="top">
-      <h3>⚖️ <a href="https://github.com/harshrastogii/FairFix">FairFix NT</a></h3>
-      <p>Explainable, human-in-the-loop triage for remote housing repairs—separating tenant need from cost-to-serve so logistics cannot quietly deprioritise remote communities.</p>
-      <sub>Python · Streamlit · fairness testing · explainable AI</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🐦 <a href="https://github.com/harshrastogii/AvianObservatory">Avian Observatory</a></h3>
-      <p>An environmental-intelligence platform that identifies NT birds from audio, then connects detections with spatial and biodiversity context for conservation decisions.</p>
-      <sub>Python · FastAPI · Next.js · PostgreSQL · TensorFlow · BirdNET</sub>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🌿 <a href="https://github.com/harshrastogii/biodiversity-surrogate-validation">Biodiversity Surrogate Validation</a></h3>
-      <p>Pre-registered research testing whether open spatial data can reliably reproduce independent expert biodiversity assessments in the Northern Territory.</p>
-      <sub>Python · GeoPandas · spatial statistics · reproducible research</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🗺️ <a href="https://github.com/harshrastogii/bushmetrics">BushMetrics</a></h3>
-      <p>Interactive analysis of whether NT protected areas represent its land and bioregions fairly.</p>
-      <sub>React · Leaflet · FastAPI · GeoPandas · <a href="https://bushmetrics.vercel.app/">live app</a></sub>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🚦 <a href="https://github.com/harshrastogii/RoadState">RoadState</a></h3>
-      <p>An interactive NT report on traffic, commuting, and wet-season road access using open government data.</p>
-      <sub>Next.js · TypeScript · Visx</sub>
-    </td>
-  </tr>
-</table>
+<sub>Each card is a small working model of the project behind it. Click through to the live tool.</sub>
+
+<p align="center">
+  <a href="https://underlink-nt.vercel.app/"><img width="49%" src="./assets/projects/underlink.svg" alt="Underlink: 18 of 23 remote NT places that reach fibre by radio rely on at least one relay with no other licensed path." /></a>
+  <a href="https://pyrantis.harshlabs.workers.dev/"><img width="49%" src="./assets/projects/pyrantis.svg" alt="PYRANTIS: classifies Northern Territory fire regimes for every 5 km cell, 2000 to 2025. Macro-F1 0.684 on held-out years." /></a>
+</p>
+<p align="center">
+  <a href="https://conflux.harshlabs.workers.dev/"><img width="49%" src="./assets/projects/conflux.svg" alt="Conflux: air and sea compared every three hours by two anomaly detectors that disagreed." /></a>
+  <a href="https://terraiq-nt.vercel.app/"><img width="49%" src="./assets/projects/terraiq.svg" alt="TerraIQ: a weather memory for 44 BOM stations that keeps what the public feed drops after 72 hours." /></a>
+</p>
+<p align="center">
+  <a href="https://avianobservatory.vercel.app/"><img width="49%" src="./assets/projects/avian-observatory.svg" alt="Avian Observatory: BirdNET mislabels Territory birds; a regional model reaches 0.88 accuracy on unseen recordings." /></a>
+  <a href="https://bushmetrics.vercel.app/"><img width="49%" src="./assets/projects/bushmetrics.svg" alt="BushMetrics: NT parks favour the rugged north; the Tanami is a significant cold spot at 0.6% protection." /></a>
+</p>
+<p align="center">
+  <a href="https://github.com/harshrastogii/rainsignal-au"><img width="49%" src="./assets/projects/rainsignal.svg" alt="RainSignal AU: live Bureau of Meteorology observations run through frozen rainfall models for 49 towns." /></a>
+  <a href="https://github.com/harshrastogii/FairFix"><img width="49%" src="./assets/projects/fairfix.svg" alt="FairFix NT: explainable triage for remote housing repairs where logistics can never move a job across a need band." /></a>
+</p>
 
 <details>
-  <summary><strong>Explore more projects</strong></summary>
+  <summary><b>The full field log: every project, what it found, and where to open it</b></summary>
   <br />
 
-  | Project | Focus |
-  |---|---|
-  | [NT Conservation Exposure](https://github.com/harshrastogii/nt-conservation-exposure) | A transparent conservation-exposure index, independently validated against expert biodiversity assessment. |
-  | [ArmaWatch](https://github.com/harshrastogii/ArmaWatch) | An accessible modern map of Australian weapons-industry facilities, prepared for Wage Peace. |
-  | [Territory Crime Atlas](https://github.com/harshrastogii/nt-crime-dashboard) | Reproducible NT recorded-crime analysis and an automatically maintained public dataset. |
-  | [Australian Charities Analytics](https://github.com/harshrastogii/PRT564-Group2-CharityAnalysis) | ACNC Charity Register analysis for public-sector and philanthropic decision-making. |
+| Project | What it found | Open |
+|---|---|---|
+| **Underlink** | A coverage map shows a signal, not what it depends on. 18 of 23 remote places that reach fibre by radio rely on a relay with no other licensed path. CDU Code Fair 2026. | [live](https://underlink-nt.vercel.app/) · [code](https://github.com/harshrastogii/underlink-nt) |
+| **PYRANTIS** | Wet-season air dryness, greenness and rain, not fire history, are the strongest predictors of when the savanna burns. 0.684 macro-F1, and it beats "same as last year" in all 66 walk-forward tests. | [live](https://pyrantis.harshlabs.workers.dev/) · [code](https://github.com/harshrastogii/PYRANTIS) · [talk](https://youtu.be/c_0yCsdZX2U) |
+| **RainSignal AU** | Live BoM observations against frozen, evaluated models for 49 towns. Observations and estimates are never conflated, and stale data is shown as stale. | [code](https://github.com/harshrastogii/rainsignal-au) |
+| **Conflux** | Air and sea, compared directly every three hours. Two detectors that shared their inputs still disagreed. | [live](https://conflux.harshlabs.workers.dev/) |
+| **TerraIQ** | A Territory-wide weather memory from 44 BOM stations, holding what the public feed drops after 72 hours. | [live](https://terraiq-nt.vercel.app/) |
+| **Avian Observatory** | On Territory audio, BirdNET confidently answers Bicknell's Thrush, a bird of the north-eastern US. A regional model reaches 0.88 on recordings it never saw. | [live](https://avianobservatory.vercel.app/) |
+| **BushMetrics** | The reserve network protects rugged northern country and skips the arid interior. The Tanami is a statistically significant cold spot at 0.6%. | [live](https://bushmetrics.vercel.app/) · [code](https://github.com/harshrastogii/bushmetrics) |
+| **FairFix NT** | Need and cost-to-serve are two scores, never merged. Logistics can reorder jobs within a need band but never across one, backed by a 200-test fairness suite. | [code](https://github.com/harshrastogii/FairFix) |
+| **RoadState** | The Territory's road problem is seasonal access, not congestion: 78% of traffic is in Darwin and 66% of the year's closures begin in the wet. | [live](https://roadstate.harshrastogii.com) · [code](https://github.com/harshrastogii/RoadState) |
+| **NT Crime Intelligence** | Switching from raw counts to per-capita rates reorders which communities are most affected. Ships a clean 2008–2026 public dataset. | [live](https://harshrastogii-nt-crime-dashboard.hf.space/) · [code](https://github.com/harshrastogii/nt-crime-dashboard) |
+| **ArmaWatch** | A mobile-friendly rebuild of Wage Peace's map of 127 Australian weapons-industry sites, with filters, summaries and CSV export. | [live](https://armawatch.vercel.app/) · [code](https://github.com/harshrastogii/ArmaWatch) |
+| **Gradaroo** | An AI-assisted graduate job finder covering 40 universities, live listings and resume matching. Nothing is scraped. | [live](https://gradaroo.com) |
+| **Biodiversity Surrogate Validation** | A pre-registered test of open spatial surrogates against expert assessment. Vegetation-type rarity won, but only modestly: these are screens, not substitutes. | [code](https://github.com/harshrastogii/biodiversity-surrogate-validation) |
+| **NT Conservation Exposure** | A transparent conservation-exposure index, independently validated against expert biodiversity assessment. | [code](https://github.com/harshrastogii/nt-conservation-exposure) |
+| **Australian Charities Analytics** | Descriptive, predictive and diagnostic analysis of the ACNC Charity Register. | [code](https://github.com/harshrastogii/PRT564-Group2-CharityAnalysis) |
+| **Student Central RAG** | *In progress.* Answers student questions from official CDU content with citations, and drafts an escalation email when it can't answer confidently. | coming soon |
+| **harshrastogi.au** | The portfolio and writing: a static site with no framework, built and deployed from Darwin. | [live](https://harshrastogi.au/) · [code](https://github.com/harshrastogii/portfolio) |
+
 </details>
 
-## Experience in analytics
+## How I work
 
-| Role | Analytics focus |
-|---|---|
-| **Senior Treasury & Reconciliation Specialist** | Process improvement and analytics—using data to strengthen workflows, controls, and operational decisions. |
-| **Treasury Analyst** | Treasury analytics and reporting, including SQL-driven reporting for stakeholder decision-making. |
-| **Reconciliation Analyst** | Data quality and analytics across reconciliation processes, supporting accurate, controlled financial operations. |
+> **01 · I start with the question, not the dataset.** Before I write a query I want to know what decision is waiting on the answer.<br />
+> **02 · I ship the tool, not the notebook.** Every project above ends as something deployed and reachable.<br />
+> **03 · I say what the data doesn't support.** The surrogates were only modestly useful. Conflux's two detectors didn't agree. Both findings are published.<br />
+> **04 · I build it so it keeps running without me.** Scheduled jobs, no servers to babysit, and a plain-English reading on every chart.
 
 ## Toolkit
 
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" alt="SQL" />
-  <img src="https://img.shields.io/badge/GeoPandas-139C5A?style=flat-square&logo=python&logoColor=white" alt="GeoPandas" />
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow" />
-  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn" />
-  <img src="https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white" alt="Plotly" />
-  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" alt="Power BI" />
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit" />
+<p align="center">
+  <img width="100%" src="./assets/strata.svg" alt="Toolkit as a core sample. Ship: Next.js, React, TypeScript, FastAPI, Streamlit, Panel, Cloudflare Workers, Vercel. Map: GeoPandas, MapLibre GL, Leaflet, Earth Engine. Model: scikit-learn, gradient boosting, PyTorch, TensorFlow, LSTM, BirdNET. Data: Python, SQL, PostgreSQL, SQLite, pandas, Jupyter, Plotly, Power BI. Automate: GitHub Actions, scheduled pipelines, pytest, Docker." />
 </p>
 
-## GitHub activity
+## Field signal
 
 <p align="center">
-  <img width="96%" src="./assets/github-metrics.svg" alt="Automatically refreshed GitHub activity, languages, repositories, and contribution calendar" />
+  <img width="100%" src="./assets/pulse.svg" alt="A year of GitHub contributions drawn as a seismograph, with totals, best day and streaks." />
 </p>
+<p align="center"><sub>Redrawn every day from the GitHub contribution calendar by <a href="./.github/workflows/field-signal.yml">a scheduled workflow</a>. No third-party stats service.</sub></p>
+
+## Before data science
+
+| Role | What I brought from it |
+|---|---|
+| **Senior Treasury & Reconciliation Specialist** | Process improvement and analytics: using data to strengthen workflows, controls and operational decisions. |
+| **Treasury Analyst** | SQL-driven treasury reporting for stakeholder decisions, and an instinct for what a number is actually going to be used for. |
+| **Reconciliation Analyst** | Data quality across reconciliation processes, keeping financial operations accurate and controlled. |
+
+<a href="mailto:harshrastogi636@gmail.com">
+  <img width="100%" src="./assets/footer.svg" alt="Got Territory data that isn't doing anything yet? Built and deployed from Darwin." />
+</a>
 
 <p align="center">
-  <sub>Metrics are refreshed weekly by GitHub Actions.</sub>
-</p>
-
-<p align="center">
-  <i>Interested in applied data science, biodiversity monitoring, responsible AI, and civic technology?</i><br />
-  <a href="https://harshrastogii.vercel.app/">Portfolio</a> · <a href="https://www.linkedin.com/in/harshrastogii/">LinkedIn</a> · <a href="mailto:harshrastogi636@gmail.com">Email</a>
+  <a href="https://harshrastogi.au/">harshrastogi.au</a> ·
+  <a href="https://www.linkedin.com/in/harshrastogii/">LinkedIn</a> ·
+  <a href="mailto:harshrastogi636@gmail.com">harshrastogi636@gmail.com</a><br />
+  <sub>Every animation on this page is hand-built SVG, generated by the scripts in <a href="./scripts">/scripts</a>.</sub>
 </p>
