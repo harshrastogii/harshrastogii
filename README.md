@@ -13,19 +13,22 @@ I'm finishing a Master of Data Science at Charles Darwin University and I lead G
 Each image shows how the project works. Select one to open it.
 
 <p>
+  <a href="https://reachnt.vercel.app/"><img width="49%" src="./assets/projects/reachnt.svg" alt="ReachNT: fixes 9 in 10 urgent remote repairs within 3 days instead of 62 by pairing neighbouring communities on one trip." /></a>
   <a href="https://underlink-nt.vercel.app/"><img width="49%" src="./assets/projects/underlink.svg" alt="Underlink: 18 of 23 remote NT places that reach fibre by radio rely on at least one relay with no other licensed path." /></a>
+</p>
+<p>
   <a href="https://pyrantis.harshlabs.workers.dev/"><img width="49%" src="./assets/projects/pyrantis.svg" alt="PYRANTIS: classifies Northern Territory fire regimes for every 5 km cell, 2000 to 2025. Macro-F1 0.684 on held-out years." /></a>
-</p>
-<p>
   <a href="https://conflux.harshlabs.workers.dev/"><img width="49%" src="./assets/projects/conflux.svg" alt="Conflux: air and sea compared every three hours by two anomaly detectors that disagreed." /></a>
+</p>
+<p>
   <a href="https://terraiq-nt.vercel.app/"><img width="49%" src="./assets/projects/terraiq.svg" alt="TerraIQ: a weather memory for 44 BOM stations that keeps what the public feed drops after 72 hours." /></a>
-</p>
-<p>
   <a href="https://avianobservatory.vercel.app/"><img width="49%" src="./assets/projects/avian-observatory.svg" alt="Avian Observatory: BirdNET mislabels Territory birds; a regional model reaches 0.88 accuracy on unseen recordings." /></a>
-  <a href="https://bushmetrics.vercel.app/"><img width="49%" src="./assets/projects/bushmetrics.svg" alt="BushMetrics: NT parks favour the rugged north; the Tanami is a significant cold spot at 0.6% protection." /></a>
 </p>
 <p>
+  <a href="https://bushmetrics.vercel.app/"><img width="49%" src="./assets/projects/bushmetrics.svg" alt="BushMetrics: NT parks favour the rugged north; the Tanami is a significant cold spot at 0.6% protection." /></a>
   <a href="https://github.com/harshrastogii/rainsignal-au"><img width="49%" src="./assets/projects/rainsignal.svg" alt="RainSignal AU: live Bureau of Meteorology observations run through frozen rainfall models for 49 towns." /></a>
+</p>
+<p>
   <a href="https://roadstate.harshrastogii.com"><img width="49%" src="./assets/projects/roadstate.svg" alt="RoadState: the Territory's road problem is seasonal access, not congestion. 78% of traffic is in Darwin and 66% of closures begin in the wet." /></a>
 </p>
 
@@ -35,6 +38,7 @@ Each image shows how the project works. Select one to open it.
 
 | Project | What it found | Links |
 |---|---|---|
+| **ReachNT** | Repair triage for remote NT public housing. Ranks repairs by need only, pairs neighbouring communities on one trip using H3 hexagons, and tells each tenant why their repair waited. 9 in 10 urgent remote repairs fixed within 3 days instead of 62 (synthetic year). CDU Code Fair 2026. | [Live site](https://reachnt.vercel.app/), [Code](https://github.com/harshrastogii/reachnt) |
 | **Underlink** | A coverage map shows a signal, not what it depends on. 18 of 23 remote places that reach fibre by radio rely on a relay with no other licensed path. CDU Code Fair 2026. | [Live site](https://underlink-nt.vercel.app/), [Code](https://github.com/harshrastogii/underlink-nt) |
 | **PYRANTIS** | Wet-season air dryness, greenness and rain, not fire history, are the strongest predictors of when the savanna burns. 0.684 macro-F1, and it beats "same as last year" in all 66 walk-forward tests. | [Live site](https://pyrantis.harshlabs.workers.dev/), [Code](https://github.com/harshrastogii/PYRANTIS), [Talk](https://youtu.be/c_0yCsdZX2U) |
 | **RainSignal AU** | Live BoM observations against frozen, evaluated models for 49 towns. Observations and estimates are never conflated, and stale data is shown as stale. | [Code](https://github.com/harshrastogii/rainsignal-au) |
