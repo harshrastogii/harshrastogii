@@ -464,7 +464,82 @@ def viz_roadstate():
     return "\n".join(out), css
 
 
+def viz_reachnt():
+    cyc = 12
+    s = 20
+    hx, vy = 1.5 * s, math.sqrt(3) * s
+
+    def centre(col, row):
+        return 34 + col * hx, 46 + row * vy + (vy / 2 if col % 2 else 0)
+
+    def hexagon(cx, cy, size=s - 1.2):
+        return " ".join(f"{f(cx + size * math.cos(math.radians(60 * k)))},{f(cy + size * math.sin(math.radians(60 * k)))}" for k in range(6))
+
+    css = f"""
+.fixA{{animation:fixA {cyc}s linear infinite}}
+@keyframes fixA{{0%,33%{{opacity:1}}37%,94%{{opacity:.12}}100%{{opacity:1}}}}
+.fixB{{animation:fixB {cyc}s linear infinite}}
+@keyframes fixB{{0%,48%{{opacity:1}}52%,94%{{opacity:.12}}100%{{opacity:1}}}}
+"""
+    out = []
+    grid = []
+    for col in range(19):
+        for row in range(5):
+            cx, cy = centre(col, row)
+            if cy < 176 + s:
+                grid.append(f'<polygon points="{hexagon(cx, cy)}"/>')
+    out.append(f'<g fill="none" stroke="{INK[3]}">{"".join(grid)}</g>')
+
+    hub, a, b, c, d = centre(1, 2), centre(12, 1), centre(13, 1), centre(6, 2), centre(16, 2)
+    # communities: a and b share a run zone; c and d wait for other trips this week
+    for (cx, cy) in (c, d):
+        out.append(f'<polygon points="{hexagon(cx, cy)}" fill="{INK[3]}" stroke="{INK[6]}"/>')
+    out.append(f'<polygon points="{hexagon(*a)}" fill="{TEAL[3]}" stroke="{TEAL[7]}"/>'
+               f'<polygon points="{hexagon(*b)}" fill="{TEAL[3]}" stroke="{TEAL[7]}"/>')
+    out.append(f'<polygon points="{hexagon(*hub)}" fill="{INK[4]}" stroke="{INK[9]}"/>'
+               f'<text x="{f(hub[0])}" y="{f(hub[1] - s - 8)}" text-anchor="middle" class="lbl2">Hub</text>')
+
+    def repairs(cx, cy, colours, cls=""):
+        c_ = f' class="{cls}"' if cls else ""
+        pts = [(-5, -4), (5, -4), (0, 5)]
+        return f"<g{c_}>" + "".join(f'<circle cx="{f(cx + dx)}" cy="{f(cy + dy)}" r="2.8" fill="{col}"/>'
+                                    for (dx, dy), col in zip(pts, colours)) + "</g>"
+    out.append(repairs(*a, [RED, AMBER, INK[9]], "fixA"))
+    out.append(repairs(*b, [RED, INK[9], INK[9]], "fixB"))
+    out.append(repairs(*c, [AMBER, INK[9], INK[9]]))
+    out.append(repairs(*d, [INK[9], INK[9], INK[9]]))
+
+    ctrl = ((b[0] + hub[0]) / 2, max(b[1], hub[1]) + 70)
+    route = (f"M{f(hub[0])},{f(hub[1])} L{f(a[0])},{f(a[1])} L{f(b[0])},{f(b[1])} "
+             f"Q{f(ctrl[0])},{f(ctrl[1])} {f(hub[0])},{f(hub[1])}")
+    out.append(f'<path id="trip" d="{route}" fill="none" stroke="{TEAL[6]}" stroke-width="1.2"/>')
+    l1 = math.dist(hub, a)
+    l2 = math.dist(a, b)
+    q = [((1 - t) ** 2 * b[0] + 2 * (1 - t) * t * ctrl[0] + t * t * hub[0],
+          (1 - t) ** 2 * b[1] + 2 * (1 - t) * t * ctrl[1] + t * t * hub[1]) for t in (i / 200 for i in range(201))]
+    total = l1 + l2 + sum(math.dist(q[i], q[i + 1]) for i in range(200))
+    pa, pb = l1 / total, (l1 + l2) / total
+    out.append(f'<circle r="4" fill="#e6fbff"><animateMotion dur="{cyc}s" repeatCount="indefinite" calcMode="linear" '
+               f'keyPoints="0;{pa:.3f};{pa:.3f};{pb:.3f};{pb:.3f};1" keyTimes="0;.32;.4;.47;.55;1"><mpath href="#trip"/></animateMotion></circle>')
+
+    mx = (a[0] + b[0]) / 2
+    out.append(f'<text x="{f(mx)}" y="{f(a[1] - s - 10)}" text-anchor="middle" class="lbl2">Shared trip: one drive, two communities</text>')
+    lx = 22
+    for label, col in [("Urgent", RED), ("High", AMBER), ("Routine", INK[9])]:
+        out.append(f'<circle cx="{lx + 4}" cy="{168}" r="3.5" fill="{col}"/><text x="{lx + 12}" y="{172}" class="lbl">{label}</text>')
+        lx += 12 + len(label) * 6.2 + 16
+    out.append(f'<text x="22" y="24" class="lbl">One crew\'s week on an H3 hexagon grid</text>')
+    return "\n".join(out), css
+
+
 PROJECTS = [
+    ("reachnt", viz_reachnt, dict(
+        title="ReachNT",
+        lines=["Fixes 9 in 10 urgent remote repairs within 3 days, not 62,",
+               "by pairing neighbouring communities on one trip."],
+        tools="Python, OR-Tools CP-SAT, H3, MapLibre. Built for the CDU Code Fair 2026.",
+        desc="A crew leaves its hub on an H3 hexagon grid and clears repairs in two neighbouring "
+             "communities on one shared trip. ReachNT fixes 9 in 10 urgent remote repairs within 3 days.")),
     ("underlink", viz_underlink, dict(
         title="Underlink",
         lines=["18 of 23 remote places that reach fibre by radio rely",
