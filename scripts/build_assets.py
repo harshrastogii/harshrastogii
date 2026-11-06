@@ -357,43 +357,66 @@ def viz_avian():
     return "\n".join(out), css
 
 
-def viz_bushmetrics():
-    r = rng(9)
-    K, X0, Y0 = 10.2, 404, 8
+BM_K, BM_X0, BM_Y0, BM_S = 10.2, 404, 8, 3.3
 
-    def P(lon, lat):
-        return X0 + (lon - 128.8) * K, Y0 + (-10.9 - lat) * K
-    css = """
-.cold{animation:cold 4s ease-in-out infinite}
-@keyframes cold{0%,100%{opacity:.55}50%{opacity:1}}
-"""
-    s = 3.3
+
+def bushmetrics_grid():
+    """Hexagon centres over the NT outline: (key, x, y, lon, lat).
+
+    Shared with bushmetrics_hex.py, which classifies each hexagon from the
+    BushMetrics v2 data (CAPAD 2024 on IBRA v7) into data/bushmetrics_hex.json.
+    """
+    K, X0, Y0, s = BM_K, BM_X0, BM_Y0, BM_S
     dx, dy = s * math.sqrt(3) + 0.9, s * 1.5 + 0.8
-    hexes, cold = [], []
     row, y = 0, Y0 + 2
     while y < Y0 + 15.2 * K:
-        x = X0 + (dx / 2 if row % 2 else 0)
+        x, col = X0 + (dx / 2 if row % 2 else 0), 0
         while x < X0 + 9.3 * K:
             lon, lat = 128.8 + (x - X0) / K, -10.9 - (y - Y0) / K
             if nt_geo.inside(lon, lat):
-                pts = " ".join(f"{f(x + s * math.cos(math.radians(60 * k + 30)))},{f(y + s * math.sin(math.radians(60 * k + 30)))}" for k in range(6))
-                if 129.2 <= lon <= 132.3 and -21.8 <= lat <= -18.4:
-                    cold.append(f'<polygon points="{pts}"/>')
-                else:
-                    north = (-lat - 11) / 15
-                    col = GREEN[7] if r.random() < 0.55 - 0.5 * north else INK[5]
-                    hexes.append(f'<polygon points="{pts}" fill="{col}"/>')
+                yield f"{row}.{col}", x, y, lon, lat
             x += dx
+            col += 1
         y += dy
         row += 1
-    tx, ty = P(129.2, -20.1)
+
+
+def viz_bushmetrics():
+    """Protected land by who manages it, from data/bushmetrics_hex.json.
+
+    Version 1 of this card drew a stylised map with the Tanami as a 0.6% cold
+    spot. BushMetrics withdrew that figure (it missed Indigenous Protected
+    Areas), so the card now draws the real v2 coverage and marks the largest
+    gap, the Sturt Plateau.
+    """
+    import json
+    with open(os.path.join(ROOT, "data", "bushmetrics_hex.json"), encoding="utf-8") as fh:
+        cls = json.load(fh)
+    s = BM_S
+    css = """
+.gap{animation:gap 4s ease-in-out infinite}
+@keyframes gap{0%,100%{opacity:.45}50%{opacity:1}}
+"""
+    fill = {"to": GREEN[7], "other": GREEN[5], "none": INK[5]}
+    hexes, gap, gap_pts = [], [], []
+    for key, x, y, lon, lat in bushmetrics_grid():
+        c = cls.get(key, {"c": "none"})
+        pts = " ".join(f"{f(x + s * math.cos(math.radians(60 * k + 30)))},{f(y + s * math.sin(math.radians(60 * k + 30)))}" for k in range(6))
+        hexes.append(f'<polygon points="{pts}" fill="{fill[c["c"]]}"/>')
+        if c.get("gap"):
+            gap.append(f'<polygon points="{pts}"/>')
+            gap_pts.append((x, y))
+    gx = min(p[0] for p in gap_pts)
+    gy = sum(p[1] for p in gap_pts) / len(gap_pts)
+    ly = max(gy, 112)  # keep the label clear of the legend
     out = ["".join(hexes),
-           f'<g class="cold" fill="{BLUE[8]}">{"".join(cold)}</g>',
-           f'<line x1="{f(tx - 4)}" y1="{f(ty)}" x2="300" y2="{f(ty)}" stroke="{INK[8]}"/>',
-           f'<text x="294" y="{f(ty - 6)}" text-anchor="end" class="lbl2">Tanami: 0.6% protected</text>',
-           f'<text x="294" y="{f(ty + 10)}" text-anchor="end" class="lbl">a significant cold spot</text>',
-           f'<rect x="22" y="24" width="10" height="10" rx="2" fill="{GREEN[7]}"/><text x="37" y="33" class="lbl">Protected land</text>',
-           f'<rect x="135" y="24" width="10" height="10" rx="2" fill="{INK[5]}"/><text x="150" y="33" class="lbl">Not protected</text>']
+           f'<g class="gap" fill="none" stroke="{AMBER}" stroke-width="1.1">{"".join(gap)}</g>',
+           f'<polyline points="{f(gx - 4)},{f(gy)} 340,{f(ly)} 300,{f(ly)}" fill="none" stroke="{INK[8]}"/>',
+           f'<text x="294" y="{f(ly - 6)}" text-anchor="end" class="lbl2">Sturt Plateau: 0.7% protected</text>',
+           f'<text x="294" y="{f(ly + 10)}" text-anchor="end" class="lbl">the widest gap, in pastoral country</text>',
+           f'<rect x="22" y="24" width="10" height="10" rx="2" fill="{GREEN[7]}"/><text x="37" y="33" class="lbl">Managed or co-managed by Traditional Owners</text>',
+           f'<rect x="22" y="44" width="10" height="10" rx="2" fill="{GREEN[5]}"/><text x="37" y="53" class="lbl">Other protected areas</text>',
+           f'<rect x="22" y="64" width="10" height="10" rx="2" fill="{INK[5]}"/><text x="37" y="73" class="lbl">Not protected</text>']
     return "\n".join(out), css
 
 
@@ -569,17 +592,17 @@ PROJECTS = [
     ("avian-observatory", viz_avian, dict(
         title="Avian Observatory",
         lines=["BirdNET calls Territory birds a North American thrush.",
-               "A regional model reaches 0.88 on unseen recordings."],
-        tools="Python, TensorFlow, BirdNET, FastAPI, Next.js.",
+               "A model for 449 species gets 80.6% on unseen 2026 audio."],
+        tools="Python, Perch 2.0, BirdNET, FastAPI, Next.js.",
         desc="A scrolling spectrogram of bird calls. BirdNET's label, Bicknell's Thrush, is struck out; "
              "the regional model's label is correct.")),
     ("bushmetrics", viz_bushmetrics, dict(
         title="BushMetrics",
-        lines=["NT parks favour the rugged north. The Tanami, the",
-               "largest bioregion, is only 0.6% protected."],
-        tools="GeoPandas, hot-spot statistics, FastAPI, React, Leaflet.",
-        desc="A hexagon map of the Northern Territory. Protected land clusters in the north; "
-             "the Tanami is a significant cold spot at 0.6% protection.")),
+        lines=["24.6% of the NT is protected, and Traditional Owners",
+               "manage or co-manage 92.6% of it. 8 of 25 bioregions hit 30%."],
+        tools="GeoPandas, CAPAD 2024, IBRA v7, FastAPI, React, Leaflet.",
+        desc="A hexagon map of the Northern Territory's protected land, coloured by who manages it. "
+             "The Sturt Plateau, 0.7% protected, is outlined as the widest gap.")),
     ("rainsignal", viz_rainsignal, dict(
         title="RainSignal AU",
         lines=["Runs live Bureau of Meteorology observations through",

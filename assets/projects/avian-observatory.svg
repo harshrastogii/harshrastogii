@@ -21,6 +21,6 @@
 </g>
 <line x1="1" y1="176.5" x2="559" y2="176.5" stroke="#26282c"/>
 <text x="22" y="210" class="ttl">Avian Observatory</text>
-<text x="22" y="238" class="txt">BirdNET calls Territory birds a North American thrush.</text><text x="22" y="259" class="txt">A regional model reaches 0.88 on unseen recordings.</text>
-<text x="22" y="280" class="stk">Python, TensorFlow, BirdNET, FastAPI, Next.js.</text>
+<text x="22" y="238" class="txt">BirdNET calls Territory birds a North American thrush.</text><text x="22" y="259" class="txt">A model for 449 species gets 80.6% on unseen 2026 audio.</text>
+<text x="22" y="280" class="stk">Python, Perch 2.0, BirdNET, FastAPI, Next.js.</text>
 </svg>

@@ -4,7 +4,7 @@
 
 I'm a data scientist in Darwin. I build tools from open Northern Territory data on fire, climate, biodiversity, connectivity and public services, and I put them online so councils, researchers and community groups can use them. Before this I worked in treasury and reconciliation, which is where I learned to ask what a number is for before calculating it.
 
-I'm finishing a Master of Data Science at Charles Darwin University and I lead GovHack in the NT. I'm open to data science roles, and to project work with researchers, councils and not-for-profits.
+I work as an Environmental Data Consultant to Landcare NT, mapping where 32 volunteer groups work and setting up their vegetation surveys and acoustic recorders. I've completed the coursework for a Master of Data Science at Charles Darwin University, and I lead GovHack in the NT. I'm open to data science roles, and to project work with researchers, councils and not-for-profits.
 
 [harshrastogi.au](https://harshrastogi.au/) &nbsp;&nbsp; [Writing](https://harshrastogi.au/articles) &nbsp;&nbsp; [LinkedIn](https://www.linkedin.com/in/harshrastogii/) &nbsp;&nbsp; [harshrastogi636@gmail.com](mailto:harshrastogi636@gmail.com)
 
@@ -22,10 +22,10 @@ Each image shows how the project works. Select one to open it.
 </p>
 <p>
   <a href="https://terraiq-nt.vercel.app/"><img width="49%" src="./assets/projects/terraiq.svg" alt="TerraIQ: a weather memory for 44 BOM stations that keeps what the public feed drops after 72 hours." /></a>
-  <a href="https://avianobservatory.vercel.app/"><img width="49%" src="./assets/projects/avian-observatory.svg" alt="Avian Observatory: BirdNET mislabels Territory birds; a regional model reaches 0.88 accuracy on unseen recordings." /></a>
+  <a href="https://avianobservatory.vercel.app/"><img width="49%" src="./assets/projects/avian-observatory.svg" alt="Avian Observatory: a regional model for 449 Territory birds names the right species 80.6% of the time on unseen 2026 recordings, against 65.7% for BirdNET." /></a>
 </p>
 <p>
-  <a href="https://bushmetrics.vercel.app/"><img width="49%" src="./assets/projects/bushmetrics.svg" alt="BushMetrics: NT parks favour the rugged north; the Tanami is a significant cold spot at 0.6% protection." /></a>
+  <a href="https://bushmetrics.vercel.app/"><img width="49%" src="./assets/projects/bushmetrics.svg" alt="BushMetrics: 24.6% of the NT is protected and Traditional Owners manage or co-manage 92.6% of it; the Sturt Plateau is 0.7% protected." /></a>
   <a href="https://github.com/harshrastogii/rainsignal-au"><img width="49%" src="./assets/projects/rainsignal.svg" alt="RainSignal AU: live Bureau of Meteorology observations run through frozen rainfall models for 49 towns." /></a>
 </p>
 <p>
@@ -40,12 +40,13 @@ Each image shows how the project works. Select one to open it.
 |---|---|---|
 | **ReachNT** | Repair triage for remote NT public housing. Ranks repairs by need only, pairs neighbouring communities on one trip using H3 hexagons, and tells each tenant why their repair waited. 9 in 10 urgent remote repairs fixed within 3 days instead of 62 (synthetic year). CDU Code Fair 2026. | [Live site](https://reachnt.vercel.app/), [Code](https://github.com/harshrastogii/reachnt) |
 | **Underlink** | A coverage map shows a signal, not what it depends on. 18 of 23 remote places that reach fibre by radio rely on a relay with no other licensed path. CDU Code Fair 2026. | [Live site](https://underlink-nt.vercel.app/), [Code](https://github.com/harshrastogii/underlink-nt) |
+| **GambaWatch NT** | A 20 m map of invasive gamba grass around Darwin and Litchfield from Sentinel-1 and Sentinel-2 in Earth Engine. Now being tested against the Weed Management Branch's aerial-survey absences, which presence-only records can't do. | In progress |
 | **PYRANTIS** | Wet-season air dryness, greenness and rain, not fire history, are the strongest predictors of when the savanna burns. 0.684 macro-F1, and it beats "same as last year" in all 66 walk-forward tests. | [Live site](https://pyrantis.harshlabs.workers.dev/), [Code](https://github.com/harshrastogii/PYRANTIS), [Talk](https://youtu.be/c_0yCsdZX2U) |
 | **RainSignal AU** | Live BoM observations against frozen, evaluated models for 49 towns. Observations and estimates are never conflated, and stale data is shown as stale. | [Code](https://github.com/harshrastogii/rainsignal-au) |
 | **Conflux** | Air and sea, compared directly every three hours. Two detectors that shared their inputs still disagreed. | [Live site](https://conflux.harshlabs.workers.dev/) |
 | **TerraIQ** | A Territory-wide weather memory from 44 BOM stations, holding what the public feed drops after 72 hours. | [Live site](https://terraiq-nt.vercel.app/) |
-| **Avian Observatory** | On Territory audio, BirdNET confidently answers Bicknell's Thrush, a bird of the north-eastern US. A regional model reaches 0.88 on recordings it never saw. | [Live site](https://avianobservatory.vercel.app/) |
-| **BushMetrics** | The reserve network protects rugged northern country and skips the arid interior. The Tanami is a statistically significant cold spot at 0.6%. | [Live site](https://bushmetrics.vercel.app/), [Code](https://github.com/harshrastogii/bushmetrics) |
+| **Avian Observatory** | On Territory audio, BirdNET confidently answers Bicknell's Thrush, a bird of the north-eastern US. A regional model for 449 species, built on Perch 2.0, names the right bird 80.6% of the time on 537 recordings from 2026, against 65.7% for BirdNET. | [Live site](https://avianobservatory.vercel.app/) |
+| **BushMetrics** | 24.6% of the NT is protected, and Traditional Owners manage or co-manage 92.6% of it. 8 of 25 bioregions meet the 30% target; the gaps run through the pastoral middle, down to 0.7% on the Sturt Plateau. Version 2 corrects my first version, which missed Indigenous Protected Areas. | [Live site](https://bushmetrics.vercel.app/), [Code](https://github.com/harshrastogii/bushmetrics) |
 | **RoadState** | The Territory's road problem is seasonal access, not congestion: 78% of traffic is in Darwin and 66% of the year's closures begin in the wet. | [Live site](https://roadstate.harshrastogii.com), [Code](https://github.com/harshrastogii/RoadState) |
 | **NT Crime Intelligence** | Switching from raw counts to per-capita rates reorders which communities are most affected. Ships a clean 2008–2026 public dataset. | [Live site](https://harshrastogii-nt-crime-dashboard.hf.space/), [Code](https://github.com/harshrastogii/nt-crime-dashboard) |
 | **ArmaWatch** | A mobile-friendly rebuild of Wage Peace's map of 127 Australian weapons-industry sites, with filters, summaries and CSV export. | [Live site](https://armawatch.vercel.app/), [Code](https://github.com/harshrastogii/ArmaWatch) |
