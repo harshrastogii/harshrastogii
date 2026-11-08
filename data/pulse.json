@@ -1,36 +1,8 @@
 {
  "login": "harshrastogii",
- "generated": "2026-11-07",
+ "generated": "2026-11-08",
  "source": "GitHub GraphQL contribution calendar",
  "days": [
-  {
-   "date": "2025-11-02",
-   "count": 0
-  },
-  {
-   "date": "2025-11-03",
-   "count": 0
-  },
-  {
-   "date": "2025-11-04",
-   "count": 0
-  },
-  {
-   "date": "2025-11-05",
-   "count": 0
-  },
-  {
-   "date": "2025-11-06",
-   "count": 0
-  },
-  {
-   "date": "2025-11-07",
-   "count": 0
-  },
-  {
-   "date": "2025-11-08",
-   "count": 0
-  },
   {
    "date": "2025-11-09",
    "count": 0
@@ -1486,6 +1458,10 @@
   {
    "date": "2026-11-07",
    "count": 8
+  },
+  {
+   "date": "2026-11-08",
+   "count": 6
   }
  ],
  "languages": [
