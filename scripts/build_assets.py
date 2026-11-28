@@ -113,7 +113,7 @@ def build_hero():
                 f'<text x="66" y="230" class="lead">I turn Territory data into decisions,</text>'
                 f'<text x="66" y="266" class="lead">not just dashboards.</text></g>')
     body.append(f'<g class="in" style="animation-delay:.9s">'
-                f'<text x="66" y="324" class="meta">Data scientist in Darwin, Northern Territory.</text>'
+                f'<text x="66" y="324" class="meta">Environmental Data Consultant, Landcare NT.</text>'
                 f'<text x="66" y="348" class="meta">Master of Data Science, Charles Darwin University.</text></g>')
 
     return document(W, H, "Harsh Rastogi, data scientist in Darwin",
@@ -555,59 +555,120 @@ def viz_reachnt():
     return "\n".join(out), css
 
 
+def viz_gambawatch():
+    """GambaWatch: a likelihood map, then an aerial survey inside gamba country
+    marks cells where gamba was and wasn't found, and the map scores both alike."""
+    r = rng(14)
+    cyc = 12
+    cell, x0, y0, cols, rows = 10, 22, 40, 28, 12
+    field = periodic_noise(r, 400, 5)
+    css = f"""
+.sweep{{animation:sweep {cyc}s linear infinite}}
+@keyframes sweep{{0%{{transform:translateX(0);opacity:1}}45%{{transform:translateX({12 * cell}px);opacity:1}}48%,100%{{opacity:0}}}}
+"""
+    out = []
+    lik = {}
+    for cy in range(rows):
+        for cx in range(cols):
+            x, y = x0 + cx * cell, y0 + cy * cell
+            dx, dy = (cx - 14) / 11, (cy - 6) / 5.5
+            v = max(0.0, min(1.0, 1.05 - (dx * dx + dy * dy) ** 0.6 + 0.35 * field(cx * 13 + cy * 31)))
+            lik[cx, cy] = v
+            out.append(f'<rect x="{x}" y="{y}" width="{cell - 1}" height="{cell - 1}" fill="{INK[3]}"/>')
+            if v > 0.05:
+                out.append(f'<rect x="{x}" y="{y}" width="{cell - 1}" height="{cell - 1}" fill="{AMBER}" opacity="{v * 0.85:.2f}"/>')
+    # the aerial survey block, inside the high-likelihood country
+    bx0, by0, bw, bh = 8, 3, 12, 7
+    kf = []
+    for i in range(bw):
+        t = 2 + 43 * (i + 0.5) / bw
+        kf.append(f"@keyframes m{i}{{0%,{t:.1f}%{{opacity:0}}{t + 1:.1f}%,90%{{opacity:1}}96%,100%{{opacity:0}}}}"
+                  f".m{i}{{opacity:0;animation:m{i} {cyc}s linear infinite}}")
+    marks = []
+    for i in range(bw):
+        for j in range(bh):
+            cx, cy = x0 + (bx0 + i) * cell + 4.5, y0 + (by0 + j) * cell + 4.5
+            if r.random() < 0.42:
+                marks.append(f'<circle class="m{i}" cx="{f(cx)}" cy="{f(cy)}" r="2.3" fill="#fff"/>')
+            else:
+                marks.append(f'<path class="m{i}" d="M{f(cx - 2)},{f(cy - 2)} l4,4 M{f(cx + 2)},{f(cy - 2)} l-4,4" stroke="{INK[1]}" stroke-width="1.4"/>')
+    out.append("".join(marks))
+    sx, sy = x0 + bx0 * cell - .5, y0 + by0 * cell - .5
+    out.append(f'<rect x="{f(sx)}" y="{f(sy)}" width="{bw * cell}" height="{bh * cell}" fill="none" stroke="#fff" stroke-opacity=".8"/>')
+    out.append(f'<g class="sweep"><line x1="{f(sx)}" y1="{f(sy - 4)}" x2="{f(sx)}" y2="{f(sy + bh * cell + 4)}" stroke="#fff" stroke-width="1.5"/></g>')
+    out.append(f'<defs><linearGradient id="ramp" x1="0" x2="1"><stop offset="0" stop-color="{INK[3]}"/><stop offset="1" stop-color="{AMBER}"/></linearGradient></defs>'
+               f'<rect x="{x0}" y="164" width="60" height="7" rx="2" fill="url(#ramp)"/>'
+               f'<text x="{x0 + 66}" y="171" class="lbl">more likely gamba</text>')
+    tx = 330
+    out.append(f'<text x="{tx}" y="62" class="lbl2">Aerial survey inside gamba country</text>'
+               f'<circle cx="{tx + 4}" cy="80" r="3" fill="#fff"/><text x="{tx + 12}" y="84" class="lbl">gamba found</text>'
+               f'<path d="M{tx + 90},77 l6,6 M{tx + 96},77 l-6,6" stroke="{INK[10]}" stroke-width="1.4"/><text x="{tx + 102}" y="84" class="lbl">not found</text>'
+               f'<text x="{tx}" y="116" class="lbl">The map scores both alike:</text>'
+               f'<text x="{tx}" y="134" class="lbl2">AUC 0.54, where 0.5 is a coin toss</text>')
+    out.append(f'<text x="22" y="24" class="lbl">Likely gamba grass at 20 m, Darwin to Litchfield</text>')
+    return "\n".join(out), css + "".join(kf)
+
+
 PROJECTS = [
     ("reachnt", viz_reachnt, dict(
         title="ReachNT",
         lines=["Fixes 9 in 10 urgent remote repairs within 3 days, not 62,",
                "by pairing neighbouring communities on one trip."],
-        tools="Python, OR-Tools CP-SAT, H3, MapLibre. Built for the CDU Code Fair 2026.",
+        tools="Python, OR-Tools CP-SAT, H3, scikit-learn. Built for the CDU Code Fair 2026.",
         desc="A crew leaves its hub on an H3 hexagon grid and clears repairs in two neighbouring "
              "communities on one shared trip. ReachNT fixes 9 in 10 urgent remote repairs within 3 days.")),
+    ("pyrantis", viz_pyrantis, dict(
+        title="PYRANTIS",
+        lines=["Classifies when every 5 km of the Territory burned, 2000–2025,",
+               "and forecasts 2026: 51% expected to burn, most after July."],
+        tools="Python, gradient boosting, LSTM, Earth Engine. Data from NAFI and SILO.",
+        desc="A grid of 5 km cells through a fire year: early fires before 31 July in amber, "
+             "late fires after it in orange.")),
     ("underlink", viz_underlink, dict(
         title="Underlink",
         lines=["18 of 23 remote places that reach fibre by radio rely",
                "on a relay with no other licensed path."],
-        tools="Python, graph analysis, Panel. Built for the CDU Code Fair 2026.",
+        tools="Python, NetworkX, ACMA licence register. Built for the CDU Code Fair 2026.",
         desc="A radio relay chain from fibre to a remote community. When a single-path relay fails, "
              "the community loses signal. 18 of 23 radio-chain places depend on such a relay.")),
-    ("pyrantis", viz_pyrantis, dict(
-        title="PYRANTIS",
-        lines=["Classifies 25 years of Territory fire seasons by 5 km",
-               "cell. Gradient boosting scores 0.684 macro-F1 on 2023–25."],
-        tools="Python, gradient boosting, LSTM. Data from NAFI, SILO and MODIS.",
-        desc="A grid of 5 km cells through a fire year: early fires before 31 July in amber, "
-             "late fires after it in orange.")),
-    ("conflux", viz_conflux, dict(
-        title="Conflux",
-        lines=["Two anomaly detectors read the same air and sea data",
-               "every three hours, and still disagree."],
-        tools="scikit-learn, PyTorch, Next.js, Cloudflare Workers.",
-        desc="Air and sea signal traces scroll past, each flagging anomalies at different moments.")),
+    ("gambawatch", viz_gambawatch, dict(
+        title="GambaWatch NT",
+        lines=["A 20 m satellite map of likely gamba grass. Tested on 27,469",
+               "recorded absences, it finds gamba country, not the grass itself."],
+        tools="Earth Engine, Sentinel-1, Sentinel-2, MODIS, gradient boosting.",
+        desc="A likelihood map of gamba grass. An aerial survey inside gamba country marks cells where "
+             "gamba was and wasn't found, and the map scores both alike: AUC 0.54.")),
     ("terraiq", viz_terraiq, dict(
         title="TerraIQ",
-        lines=["Keeps the readings from 44 BOM stations that the",
-               "public feed drops after 72 hours."],
-        tools="Python, SQLite, GitHub Actions, MapLibre GL.",
+        lines=["Keeps the readings from 44 BOM stations that the public",
+               "feed drops after 72 hours: more than 40,000 so far."],
+        tools="Python, SQLite, GitHub Actions, BOM observations.",
         desc="Rainfall readings scroll left. The public feed loses them after 72 hours; TerraIQ keeps them all.")),
+    ("conflux", viz_conflux, dict(
+        title="Conflux",
+        lines=["Five detectors watch BOM air and AIMS sea data every",
+               "three hours. They disagree, and a language model reads each alarm."],
+        tools="Python, Isolation Forest, LSTM autoencoder, STL, Next.js.",
+        desc="Air and sea signal traces scroll past, each flagging anomalies at different moments.")),
     ("avian-observatory", viz_avian, dict(
         title="Avian Observatory",
         lines=["BirdNET calls Territory birds a North American thrush.",
                "A model for 449 species gets 80.6% on unseen 2026 audio."],
-        tools="Python, Perch 2.0, BirdNET, FastAPI, Next.js.",
+        tools="Python, Perch 2.0, FastAPI, Next.js, PostgreSQL.",
         desc="A scrolling spectrogram of bird calls. BirdNET's label, Bicknell's Thrush, is struck out; "
              "the regional model's label is correct.")),
     ("bushmetrics", viz_bushmetrics, dict(
         title="BushMetrics",
         lines=["24.6% of the NT is protected, and Traditional Owners",
                "manage or co-manage 92.6% of it. 8 of 25 bioregions hit 30%."],
-        tools="GeoPandas, CAPAD 2024, IBRA v7, FastAPI, React, Leaflet.",
+        tools="Python, Shapely, CAPAD 2024, IBRA v7, Getis-Ord Gi*.",
         desc="A hexagon map of the Northern Territory's protected land, coloured by who manages it. "
              "The Sturt Plateau, 0.7% protected, is outlined as the widest gap.")),
     ("rainsignal", viz_rainsignal, dict(
         title="RainSignal AU",
-        lines=["Runs live Bureau of Meteorology observations through",
-               "frozen, evaluated rainfall models for 49 towns."],
-        tools="Python, scikit-learn, BoM feeds, Cloudflare Pages.",
+        lines=["Runs live Bureau of Meteorology observations through frozen",
+               "rainfall models trained on 267,317 station-days, for 49 towns."],
+        tools="Python, frozen ML models, BOM observations, Cloudflare Workers.",
         desc="Rain over 49 town gauges. Observed rainfall is drawn solid and model estimates as outlines, never mixed.")),
     ("roadstate", viz_roadstate, dict(
         title="RoadState",

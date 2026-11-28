@@ -26,5 +26,5 @@
 <line x1="1" y1="176.5" x2="559" y2="176.5" stroke="#26282c"/>
 <text x="22" y="210" class="ttl">BushMetrics</text>
 <text x="22" y="238" class="txt">24.6% of the NT is protected, and Traditional Owners</text><text x="22" y="259" class="txt">manage or co-manage 92.6% of it. 8 of 25 bioregions hit 30%.</text>
-<text x="22" y="280" class="stk">GeoPandas, CAPAD 2024, IBRA v7, FastAPI, React, Leaflet.</text>
+<text x="22" y="280" class="stk">Python, Shapely, CAPAD 2024, IBRA v7, Getis-Ord Gi*.</text>
 </svg>

@@ -21,6 +21,6 @@
 </g>
 <line x1="1" y1="176.5" x2="559" y2="176.5" stroke="#26282c"/>
 <text x="22" y="210" class="ttl">Conflux</text>
-<text x="22" y="238" class="txt">Two anomaly detectors read the same air and sea data</text><text x="22" y="259" class="txt">every three hours, and still disagree.</text>
-<text x="22" y="280" class="stk">scikit-learn, PyTorch, Next.js, Cloudflare Workers.</text>
+<text x="22" y="238" class="txt">Five detectors watch BOM air and AIMS sea data every</text><text x="22" y="259" class="txt">three hours. They disagree, and a language model reads each alarm.</text>
+<text x="22" y="280" class="stk">Python, Isolation Forest, LSTM autoencoder, STL, Next.js.</text>
 </svg>

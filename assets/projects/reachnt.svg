@@ -36,5 +36,5 @@
 <line x1="1" y1="176.5" x2="559" y2="176.5" stroke="#26282c"/>
 <text x="22" y="210" class="ttl">ReachNT</text>
 <text x="22" y="238" class="txt">Fixes 9 in 10 urgent remote repairs within 3 days, not 62,</text><text x="22" y="259" class="txt">by pairing neighbouring communities on one trip.</text>
-<text x="22" y="280" class="stk">Python, OR-Tools CP-SAT, H3, MapLibre. Built for the CDU Code Fair 2026.</text>
+<text x="22" y="280" class="stk">Python, OR-Tools CP-SAT, H3, scikit-learn. Built for the CDU Code Fair 2026.</text>
 </svg>
