@@ -26,5 +26,5 @@
 <circle r="2.4" fill="#8be9f7" opacity="0"><set attributeName="opacity" to="1" begin="4s"/><animateMotion dur="14s" begin="4s" repeatCount="indefinite"><mpath href="#hwy"/></animateMotion></circle>
 <circle r="2.4" fill="#8be9f7" opacity="0"><set attributeName="opacity" to="1" begin="11s"/><animateMotion dur="14s" begin="11s" repeatCount="indefinite"><mpath href="#hwy"/></animateMotion></circle>
 <g class="in" style="animation-delay:.3s"><text x="64" y="176" class="name">Harsh Rastogi</text><text x="66" y="230" class="lead">I turn Territory data into decisions,</text><text x="66" y="266" class="lead">not just dashboards.</text></g>
-<g class="in" style="animation-delay:.9s"><text x="66" y="324" class="meta">Data scientist in Darwin, Northern Territory.</text><text x="66" y="348" class="meta">Master of Data Science, Charles Darwin University.</text></g>
+<g class="in" style="animation-delay:.9s"><text x="66" y="324" class="meta">Environmental Data Consultant, Landcare NT.</text><text x="66" y="348" class="meta">Master of Data Science, Charles Darwin University.</text></g>
 </svg>

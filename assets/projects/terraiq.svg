@@ -24,6 +24,6 @@
 </g>
 <line x1="1" y1="176.5" x2="559" y2="176.5" stroke="#26282c"/>
 <text x="22" y="210" class="ttl">TerraIQ</text>
-<text x="22" y="238" class="txt">Keeps the readings from 44 BOM stations that the</text><text x="22" y="259" class="txt">public feed drops after 72 hours.</text>
-<text x="22" y="280" class="stk">Python, SQLite, GitHub Actions, MapLibre GL.</text>
+<text x="22" y="238" class="txt">Keeps the readings from 44 BOM stations that the public</text><text x="22" y="259" class="txt">feed drops after 72 hours: more than 40,000 so far.</text>
+<text x="22" y="280" class="stk">Python, SQLite, GitHub Actions, BOM observations.</text>
 </svg>

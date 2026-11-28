@@ -23,6 +23,6 @@
 </g>
 <line x1="1" y1="176.5" x2="559" y2="176.5" stroke="#26282c"/>
 <text x="22" y="210" class="ttl">RainSignal AU</text>
-<text x="22" y="238" class="txt">Runs live Bureau of Meteorology observations through</text><text x="22" y="259" class="txt">frozen, evaluated rainfall models for 49 towns.</text>
-<text x="22" y="280" class="stk">Python, scikit-learn, BoM feeds, Cloudflare Pages.</text>
+<text x="22" y="238" class="txt">Runs live Bureau of Meteorology observations through frozen</text><text x="22" y="259" class="txt">rainfall models trained on 267,317 station-days, for 49 towns.</text>
+<text x="22" y="280" class="stk">Python, frozen ML models, BOM observations, Cloudflare Workers.</text>
 </svg>

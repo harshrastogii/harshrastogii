@@ -41,5 +41,5 @@
 <line x1="1" y1="176.5" x2="559" y2="176.5" stroke="#26282c"/>
 <text x="22" y="210" class="ttl">Underlink</text>
 <text x="22" y="238" class="txt">18 of 23 remote places that reach fibre by radio rely</text><text x="22" y="259" class="txt">on a relay with no other licensed path.</text>
-<text x="22" y="280" class="stk">Python, graph analysis, Panel. Built for the CDU Code Fair 2026.</text>
+<text x="22" y="280" class="stk">Python, NetworkX, ACMA licence register. Built for the CDU Code Fair 2026.</text>
 </svg>
